@@ -1,4 +1,4 @@
-PWD C:/Users/chris/Documents/FortgeschrittenesPraktikum/V53-Mikrowellen
+PWD C:/Users/Lucas/Documents/FortgeschrittenesPraktikum/V53-Mikrowellen
 INPUT c:/texlive/2017/texmf-var/web2c/luatex/lualatex.fmt
 INPUT ./main.tex
 OUTPUT build/main.log
@@ -380,6 +380,10 @@ INPUT ./klystron.PNG
 INPUT klystron.PNG
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/durchfuehrung.tex
+INPUT ./Grundaufbau.PNG
+INPUT Grundaufbau.PNG
+INPUT ./Mode.PNG
+INPUT Mode.PNG
 INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
 INPUT build/plot1.pdf
