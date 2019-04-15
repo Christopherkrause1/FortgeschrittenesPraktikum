@@ -14,8 +14,11 @@ all: build/main.pdf
 build/plot1.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
 
+build/daempfung.pdf: daempfung.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS="$(call translate,$(pwd):)" python daempfung.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/plot1.pdf
+build/main.pdf: build/plot1.pdf build/daempfung.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS="$(call translate,build:)" \
