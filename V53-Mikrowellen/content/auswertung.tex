@@ -92,3 +92,54 @@ In Abbildung 3 sind die Messwerte in einem Diagramm dargestellt.
   \caption{Eichkurve und gemessene Dämpfungen}
   \label{fig:plot}
 \end{figure}
+
+\subsection{Bestimmung des Welligkeitsverhältnisses}
+\subsubsection{Direkte Methode}
+Bei der direkten Methode wird das Welligkeitsverhältnis (Stehwellenverhältnis) direkt
+vom SWR-Meter abgelesen. Die entsprechenden Werte sind in Tabelle \ref{tab:direkt} zu finden.
+
+\begin{table}[H]
+  \centering
+  \caption{Stehwellenverhältnis in Abhängigkeit der Stifttiefe des Gleitschraubentransformators bei der direkten Methode}
+  \label{tab:direkt}
+  \begin{tabular}{c c}
+    \toprule
+    $d$/mm & SWR \\
+    \midrule
+    0 &  1.02    \\
+    3 &  1.17    \\
+    5 &  1.47    \\
+    7 &  2.30    \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsubsection{3dB Methode}
+Die gemessenen Abstände nach links und rechts, die sich bei der 3dB-Methode ergeben haben,
+lauten
+\begin{align*}
+  d_l &= 83\, \symup{mm} \\
+  d_r &= 71\, \symup{mm}
+\end{align*}
+
+Die Stifttiefe beträgt dabei $9\, \symup{mm}$.
+Daraus ergibt sich nach Gleichung (6) das Welligkeitsverhältnis:
+
+\begin{equation*}
+  S = 1,719 \pm 0,024
+\end{equation*}
+
+Dabei wird für die Wellenlänge im Hohlleiter das oben bereits genannte Ergebnis von $\lambda_g = 4,73 \pm 0,13 \, \symup{cm}$ verwendet.
+
+\subsubsection{Abschwächermethode}
+Die Dämpfung vor bzw. nachdem das Maximums des Ausgangssignals dem Minimum
+gleichgemacht wird, werden gemessen zu
+\begin{align*}
+  A_{vor} &= 20 \, \symup{dB} \\
+  A_{nach} &= 38,5 \, \symup{dB}
+\end{align*}
+
+Damit lässt sich nach Gleichung (8) das SWR berechnen:
+\begin{equation*}
+  S = 10^{\frac{A_{nach}-A_{vor}}{20}} = 8,414
+\end{equation*}

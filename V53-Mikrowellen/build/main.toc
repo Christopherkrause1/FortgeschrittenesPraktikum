@@ -10,5 +10,9 @@
 \contentsline {section}{\numberline {4}Auswertung}{8}{section.4}
 \contentsline {subsection}{\numberline {4.1}Darstellung der Moden}{8}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Frequenz, Wellenlänge und Dämpfung}{10}{subsection.4.2}
-\contentsline {section}{\numberline {5}Diskussion}{12}{section.5}
-\contentsline {section}{\nonumberline Literatur}{12}{section*.9}
+\contentsline {subsection}{\numberline {4.3}Bestimmung des Welligkeitsverhältnisses}{12}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Direkte Methode}{12}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}3dB Methode}{12}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}Abschwächermethode}{12}{subsubsection.4.3.3}
+\contentsline {section}{\numberline {5}Diskussion}{13}{section.5}
+\contentsline {section}{\nonumberline Literatur}{13}{section*.10}
