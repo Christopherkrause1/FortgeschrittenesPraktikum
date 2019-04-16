@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber build/main"] 1555406749 "build/main.bcf" "build/main.bbl" "build/main" 1555406780
-  "./build/main.bcf" 1555406778 96052 e4e69a730f97de571205ace2db076541 ""
+["biber build/main"] 1555406749 "build/main.bcf" "build/main.bbl" "build/main" 1555409610
+  "./build/main.bcf" 1555409608 96052 e4e69a730f97de571205ace2db076541 ""
   "lit.bib" 1509099497 109 86a179d4531778a9d3936100d09f088a ""
   (generated)
   "build/main.blg"
   "build/main.bbl"
-["lualatex"] 1555406771 "main.tex" "build/main.pdf" "main" 1555406780
+["lualatex"] 1555409600 "main.tex" "build/main.pdf" "main" 1555409610
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/latinmodern-math.luc" 1554632666 609658 7790e6567ef971188ae3037ffa442b16 ""
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1554632664 132365 248113187f4e7f44d7792fafd2880b70 ""
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1554632664 130352 02eb41f94b7e91770211860f83946427 ""
@@ -20,11 +20,11 @@
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/xits-mathbold.luc" 1554990489 246589 cbf7b293c929308fb85c2f73467d843e ""
   "Grundaufbau.PNG" 1555403192 714357 12aed9a3786fd75c44e540ca51d442fd ""
   "Mode.PNG" 1555403192 61339 f88959a057391d20271e1c624c9b987b ""
-  "build/daempfung.pdf" 1555403192 13821 8c69c76a2d8570f748b8fdc9ce471786 ""
-  "build/main.aux" 1555406778 9078 3563f3b158863dd468d03e6d3db7bc5d ""
+  "build/daempfung.pdf" 1555409599 13789 f7c383b70b7fa7e23533364eb3f1a66a ""
+  "build/main.aux" 1555409608 9078 3563f3b158863dd468d03e6d3db7bc5d ""
   "build/main.bbl" 1555406751 1329 58464bfbed948f21f49af254c1ccc8f6 "biber build/main"
-  "build/main.run.xml" 1555406778 2330 4233a9836802043afc4fd6b527c0f360 ""
-  "build/main.toc" 1555406778 1060 6f49f2fd675f6b16cf32c40eac841c96 ""
+  "build/main.run.xml" 1555409608 2330 4233a9836802043afc4fd6b527c0f360 ""
+  "build/main.toc" 1555409608 1060 6f49f2fd675f6b16cf32c40eac841c96 ""
   "build/plot1.pdf" 1555340453 17187 af1e1621a74f8aa76795910d0ea4eecc ""
   "c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1504727362 916 f87d7c45f9c908e672703b83b72241a3 ""
   "c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1504727362 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -217,7 +217,7 @@
   "c:/texlive/2017/texmf-dist/tex/luatex/luatexbase/luatexbase.sty" 1504760326 10170 b1a2248f43cab899e3fe36f676176865 ""
   "c:/texlive/2017/texmf-var/tex/generic/config/language.dat.lua" 1504765210 18023 fad45b5a0340cc0472c10251f3a13733 ""
   "c:/texlive/2017/texmf-var/web2c/luatex/lualatex.fmt" 1504765307 1348218 e75df27db1ce96235705b66df5fd06fa ""
-  "content/auswertung.tex" 1555406736 2829 438142e00297b5dd3b1044004ab4c7df ""
+  "content/auswertung.tex" 1555409540 2830 4cecd71a00fef0fd5b90658e10f28eae ""
   "content/diskussion.tex" 1509099497 46 402cc6c9751419c0f1a455b2d4ed1f51 ""
   "content/durchfuehrung.tex" 1555403192 5469 75ca976d3a682741865b05c6834543a2 ""
   "content/theorie.tex" 1555069838 4484 a9ab0a17aa1bb18862d6f47f78ba125b ""
@@ -228,9 +228,9 @@
   "main.tex" 1554989988 434 a4faed2cfd572141dbab846092e00fa3 ""
   "plot1.pdf" 0 -1 0 ""
   (generated)
-  "build/main.pdf"
+  "build/main.toc"
+  "build/main.log"
+  "build/main.run.xml"
   "build/main.bcf"
   "build/main.aux"
-  "build/main.run.xml"
-  "build/main.log"
-  "build/main.toc"
+  "build/main.pdf"
