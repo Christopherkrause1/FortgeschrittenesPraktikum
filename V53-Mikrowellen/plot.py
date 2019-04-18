@@ -29,7 +29,7 @@ errors = np.sqrt(np.diag(covariance_matrix))
 plt.plot(x_plot, f(x_plot, *params), 'k-', linewidth=0.5)
 plt.plot(U3 , A3, 'r.', Markersize=4)
 
-plt.title('Parabeln')
+#plt.title('Parabeln')
 plt.legend()
 plt.grid()
 plt.ylim(-5, 160)
