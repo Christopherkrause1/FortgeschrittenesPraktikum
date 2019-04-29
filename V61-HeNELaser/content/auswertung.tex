@@ -3,11 +3,86 @@
 
 
 \subsection{Stabilitätsbedingung}
-Der Abstand der Resonatoren voneinander und der zugehörige gemessene Strom wird in Tavelle 1 dargestellt. 
+Der Abstand der Resonatoren voneinander und der zugehörige gemessene Strom wird in Tavelle 1 dargestellt.
 
-\begin{figure}
+
+\begin{table}[H]
+\centering
+\caption{Messdaten für dubiose Elemente.}
+\sisetup{table-format=2.1}
+\begin{tabular}{S S| S S}
+  \toprule
+    \multicolumn{2}{c}{Konkav/Planar} & \multicolumn{2}{c}{Konkav/Konkav} \\
+    \cmidrule(lr){1-2}\cmidrule(lr){3-4}
+    {$L/$cm} & {$I/\, \symup{\mu A}$} & {L/cm} & {$I/\, \symup{\mu A}$} \\
+    \midrule
+    60 &    120 &  60  &  266  \\
+    62 &    112 &  63  &  342  \\
+    63 &    113 &  66  &  382  \\
+    64 &    102 &  69  &  398  \\
+    66 &    130 &  72  &  353  \\
+    68 &    128 &  75  &  367  \\
+    69 &    111 &  78  &  332  \\
+    70 &     70 &  81  &  385  \\
+    72 &    116 &  84  &  391  \\
+    74 &     69 &  87  &  222  \\
+    75 &    105 &  90  &  120  \\
+    76 &     65 &  93  &  215  \\
+    78 &    112 &  96  &  211  \\
+    81 &    111 &  99  &  112  \\
+    84 &     77 &  102 &  146  \\
+    87 &     45 &  105 &  157  \\
+    90 &     39 &  108 &  176  \\
+    93 &     22 &  111 &  164  \\
+       &        &  114 &  203  \\
+       &        &  117 &  240  \\
+       &        &  120 &  241  \\
+       &        &  123 &  205  \\
+       &        &  126 &  209  \\
+       &        &  129 &  225  \\
+       &        &  132 &  217  \\
+       &        &  135 &  255  \\
+       &        &  138 &  276  \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+In Abbildung 1 sind die Messwerte und die Anpassungsfunktion für 2 konkave Spiegel dargestellt.
+Dabei hat die Anpassungsfunktion mit den Parameter $a$, $b$ und $c$ die Form:
+\begin{align*}
+  I_{\symup{1}} = a \cdot L^2 + b \cdot L + c
+\end{align*}
+\begin{figure}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
+  \includegraphics{stabilitaet.pdf}
+  \caption{Messwerte und Anpassungsfunktion für zwei konkave Spiegel.}
   \label{fig:plot}
 \end{figure}
+
+Die Fitparameter betragen :
+\begin{align*}
+  a = \SI{ 8.0(25)e-2}{\milli\ampere\per\centi\meter\squared} \\
+  b = \SI{-1.8(5)e1}{\milli\ampere\per\centi\meter} \\
+  c = \SI{1.19(24)e3}{\milli\ampere}
+\end{align*}
+
+
+In Abbildung 2 sind die Messwerte und die Anpassungsfunktion für ein konkaven und einen
+planaren Spiegel dargestellt.
+Dabei hat die Anpassungsfunktion mit den Parametern $d$ und $e$ die Form:
+\begin{align*}
+  I_{\symup{1}} = d \cdot L + b
+\end{align*}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{stabilitaet_2.pdf}
+  \caption{Messwerte und Anpassungsfunktion für ein konkaven und ein planaren Spiegel.}
+  \label{fig:plot}
+\end{figure}
+
+Die Fitparameter betragen :
+\begin{align*}
+  &d = \SI{-2.6(5)}{\milli\ampere\per\centi\meter} \\
+  &e = \SI{280(38)}{\milli\ampere}
+\end{align*}
