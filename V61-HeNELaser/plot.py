@@ -7,6 +7,28 @@ from uncertainties import ufloat
 L_1, I_1 = np.genfromtxt('konkav.txt', unpack=True)
 L_2, I_2 = np.genfromtxt('planar.txt', unpack=True)
 
+
+def f_s(L, r_1, r_2):
+    return 1- L/r_1 - L/r_2 + L**2 /(r_1*r_2)
+def f_p(L, r_1):
+    return (1-L/r_1)
+x = np.linspace(0, 3)
+plt.plot(x, f_s(x, 1.4, 1.4), 'r-', label = 'konkav/konkav')
+plt.plot(x, f_p(x, 1.4), 'b-', label = 'konkav/planar')
+a = np.ones(50)
+y = np.linspace(-0.5, 3)
+plt.plot(y, a, 'k--')
+#plt.plot(x, f_s(x, 1400, 1400), 'b-')
+plt.legend()
+plt.grid()
+plt.xlim((-0.5, 3))
+plt.ylim((0, 1.2))
+plt.ylabel(r'$g_{\mathrm{1}} g_{\mathrm{2}}$')
+plt.xlabel(r'$L / $m')
+plt.savefig('build/parameter.pdf')
+plt.clf()
+
+
 def f_1(L, a, b, c):
    return a * L**2 + b*L + c
 
