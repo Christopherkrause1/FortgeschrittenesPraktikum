@@ -45,3 +45,30 @@ plt.xlim((56, 95))
 plt.ylabel(r'$I / \mathrm{\mu A}$')
 plt.xlabel(r'$L / $cm')
 plt.savefig('build/stabilitaet_2.pdf')
+plt.clf()
+
+print('--------------------------------------')
+print('Polarisation')
+
+def f(P, I0, phi0):
+    return I0 * np.cos(P-phi0)**2
+
+
+P, I = np.genfromtxt('polarisation.txt', unpack=True)
+P = (P/360)*2*np.pi
+
+x_plot = np.linspace(-0.2,2*np.pi,200)
+params, covariance_matrix = curve_fit(f, P, I)
+errors = np.sqrt(np.diag(covariance_matrix))
+plt.plot(x_plot, f(x_plot, *params), 'k-', label='Anpassungsfunktion', linewidth=0.5)
+print(params)
+print(np.sqrt(np.diag(covariance_matrix)))
+plt.gcf().subplots_adjust(bottom=0.18)
+plt.plot(P, I, 'r.', label='Messwerte', Markersize=4)
+plt.legend()
+plt.grid()
+plt.xlim((-0.2, 2*np.pi))
+plt.ylabel(r'$I / \mathrm{\mu A}$')
+plt.xlabel(r'$\phi_{P}$')
+plt.savefig('build/polarisation.pdf')
+plt.clf()

@@ -86,3 +86,28 @@ Die Fitparameter betragen :
   &d = \SI{-2.6(5)}{\milli\ampere\per\centi\meter} \\
   &e = \SI{280(38)}{\milli\ampere}
 \end{align*}
+
+
+\subsection{Polarisation}
+Der eingestellte Winkel am Polarisationsfilter und der zugehörige gemessene Strom
+wird in Tabelle ... dargestellt.
+
+In Abbildung \ref{fig:polarisation} sind die Messwerte und die entsprechende
+Anpassungsfunktion aufgetragen. Bei der Anpassungsfunktion handelt es sich um eine
+Funktion der Form:
+\begin{equation*}
+  I_\symup{P}(\phi_\symup{P}) = I_0 \cdot \cos^2(\phi_\symup{P} - \phi_0)
+\end{equation*}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{polarisation.pdf}
+  \caption{Messwerte und Anpassungsfunktion der Polarisationsmessung.}
+  \label{fig:polarisation}
+\end{figure}
+
+Die Fitparameter lauten:
+\begin{align*}
+  I_0 &= \SI{209.73(608)}{\micro\ampere} \\
+  \phi_0 &= \SI{-74.98(3)}{}
+\end{align*}
