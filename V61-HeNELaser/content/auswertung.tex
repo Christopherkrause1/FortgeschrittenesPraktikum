@@ -87,6 +87,53 @@ Die Fitparameter betragen :
   &e = \SI{280(38)}{\milli\ampere}
 \end{align*}
 
+\subsection{TEM-Moden}
+Die gemessenen Werte der Intensität der Grundmode und der ersten Mode bei den
+entsprechenden Positionen der Diode werden in Tabelle ... dargestellt.
+
+In Abbildung \ref{fig:grundmode} sind die Messwerte und die Anpassungsfunktion
+für die Grundmode aufgetragen. Bei der Anpassungsfunktion handelt es sich dabei
+um eine gaußsche Normalverteilung der Form:
+\begin{equation*}
+  I_\symup{G}(x) = I_0 \cdot exp\left(-2 \cdot \left(\frac{x - x_0}{\omega_0}\right)^2\right)
+\end{equation*}
+
+Bei der Variablen $x$ handelt es sich dabei um die Position der Diode auf der Schiene.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{grundmode.pdf}
+  \caption{Messwerte und Anpassungsfunktion Grundmode.}
+  \label{fig:grundmode}
+\end{figure}
+
+Die Fitparameter lauten:
+\begin{align*}
+  I_0 &= \SI{1.10(1)}{\micro\ampere} \\
+  x_0 &= \SI{-1.96(8)}{\milli\meter} \\
+  \omega_0 &= \SI{17.04(19)}{\milli\meter}
+\end{align*}
+
+Entsprechend sind in Abbildung \ref{fig:erstemode} die Messwerte und Anpassungsfunktion
+der ersten Mode aufgetragen. Bei der Anpassungsfunktion handelt es sich hierbei jeodch
+nicht mehr um eine einfache Normalverteilung, sondern um eine Funktion der Form:
+\begin{equation*}
+  I_{1}(x) = I_1 \cdot \left(\frac{x - x_1}{\omega_1}\right)^2 \cdot exp\left(-2 \cdot \left(\frac{x - x_1}{\omega_1}\right)^2\right)
+\end{equation*}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{erstemode.pdf}
+  \caption{Messwerte und Anpassungsfunktion der ersten Mode.}
+  \label{fig:erstemode}
+\end{figure}
+
+Die Fitparameter lauten:
+\begin{align*}
+  I_1 &= \SI{1.78(3)}{\micro\ampere} \\
+  x_1 &= \SI{4.35(12)}{\milli\meter} \\
+  \omega_1 &= \SI{15.82(18)}{\milli\meter}
+\end{align*}
 
 \subsection{Polarisation}
 Der eingestellte Winkel am Polarisationsfilter und der zugehörige gemessene Strom

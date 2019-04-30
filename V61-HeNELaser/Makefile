@@ -13,9 +13,13 @@ all: build/main.pdf
 # hier Python-Skripte:
 build/polarisation.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
+build/grundmode.pdf: plot.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
+build/erstemode.pdf: plot.py matplotlibrc header-matplotlib.tex | build
+		TEXINPUTS="$(call translate,$(pwd):)" python plot.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/polarisation.pdf
+build/main.pdf: build/polarisation.pdf build/grundmode.pdf build/erstemode.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS="$(call translate,build:)" \
