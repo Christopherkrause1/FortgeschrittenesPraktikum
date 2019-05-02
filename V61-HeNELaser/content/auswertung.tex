@@ -69,7 +69,7 @@ Dabei hat die Anpassungsfunktion mit den Parameter $a$, $b$ und $c$ die Form:
   \label{fig:plot}
 \end{figure}
 
-Die Fitparameter betragen :
+Die Fitparameter betragen:
 \begin{align*}
   a = \SI{ 8.0(25)e-2}{\milli\ampere\per\centi\meter\squared} \\
   b = \SI{-1.8(5)e1}{\milli\ampere\per\centi\meter} \\
@@ -91,7 +91,7 @@ Dabei hat die Anpassungsfunktion mit den Parametern $d$ und $e$ die Form:
   \label{fig:plot}
 \end{figure}
 
-Die Fitparameter betragen :
+Die Fitparameter betragen:
 \begin{align*}
   &d = \SI{-2.6(5)}{\milli\ampere\per\centi\meter} \\
   &e = \SI{280(38)}{\milli\ampere}
@@ -180,7 +180,7 @@ Die Fitparameter lauten:
 \end{align*}
 
 Entsprechend sind in Abbildung \ref{fig:erstemode} die Messwerte und Anpassungsfunktion
-der ersten Mode aufgetragen. Bei der Anpassungsfunktion handelt es sich hierbei jeodch
+der ersten Mode aufgetragen. Bei der Anpassungsfunktion handelt es sich hierbei jedoch
 nicht mehr um eine einfache Normalverteilung, sondern um eine Funktion der Form:
 \begin{equation*}
   I_{1}(x) = I_1 \cdot \left(\frac{x - x_1}{\omega_1}\right)^2 \cdot exp\left(-2 \cdot \left(\frac{x - x_1}{\omega_1}\right)^2\right)
@@ -269,10 +269,7 @@ Daraus ergibt sich ein mittlerer Abstand zum ersten Beugungsmaximum von
   d = \SI{7.15(7)}{cm}
 \end{equation*}
 
-Dabei wird der Fehler $\sigma$ mit der gausschen Fehlerfortpflanzung berechnet.
-\begin{align*}
-  \sigma = \sqrt{\frac{d_{g}^{2} \sigma_{d}^{2}}{L^{2}} + \frac{d^{2} d_{g}^{2}}{L^{4}} \sigma_{L}^{2}}
-\end{align*}
+
 Die Gitterkonstante beträgt
 \begin{equation*}
   d_\symup{g} = 1,25 \cdot 10^{-5} \, \symup{m}
@@ -286,5 +283,12 @@ Wellenlänge von
 \begin{equation*}
   \lambda = \SI{621(6)}{\nano\meter}
 \end{equation*}
+
+Dabei wird der Fehler $\sigma$ mit der gauß'schen Fehlerfortpflanzung berechnet.
+\begin{align*}
+  \sigma = \sqrt{\sigma_{L}^{2} \left(- \frac{d d_{g}}{L^{2} \sqrt{1 + \frac{d^{2}}{L^{2}}}}
+  + \frac{d^{3} d_{g}}{L^{4} \left(1 + \frac{d^{2}}{L^{2}}\right)^{\frac{3}{2}}}\right)^{2} + \sigma_{d}^{2} \left(\frac{d_{g}}{L \sqrt{1 + \frac{d^{2}}{L^{2}}}} - \frac{d^{2} d_{g}}{L^{3} \left(1
+  + \frac{d^{2}}{L^{2}}\right)^{\frac{3}{2}}}\right)^{2} }
+\end{align*}
 Die relative Abweichung zum erwarteten Wert von $\SI{633}{\nano\meter}$ beträgt
 somit $1,9\,\%$.
