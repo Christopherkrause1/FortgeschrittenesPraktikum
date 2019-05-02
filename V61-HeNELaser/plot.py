@@ -3,6 +3,8 @@ import numpy as np
 from scipy.constants import mu_0
 from scipy.optimize import curve_fit
 from uncertainties import ufloat
+from uncertainties.umath import *
+import uncertainties.unumpy as unp
 
 L_1, I_1 = np.genfromtxt('konkav.txt', unpack=True)
 L_2, I_2 = np.genfromtxt('planar.txt', unpack=True)
@@ -141,3 +143,16 @@ plt.ylabel(r'$I / \mathrm{\mu A}$')
 plt.xlabel('$x$ / mm')
 plt.savefig('build/erstemode.pdf')
 plt.clf()
+
+print('----------------------------------------------------')
+print('Wellenlaenge:')
+dr = ufloat(7.2, 0.1)
+dl = ufloat(7.1, 0.1)
+L = ufloat(143.8, 0.1)
+dg = (1/80) * 10**(-3)
+
+d = np.mean([dr,dl])
+print('Mittelwert:', d)
+print('Gitterkonstante:', dg)
+lam = dg * (d/L)
+print('Wellenlaenge:', lam)
