@@ -141,9 +141,10 @@ Der Raumwinkel ergibt sich dann aus (Quelle)
 $N_\symup{Au}$ ist die Teilchendichte von Gold. Sie berechnet sich mit der Dichte
 $\rho_\symup{Au} = \SI{19.32}{\gram\per\centi\meter^3}$ (Quelle) und molaren Masse $M_\symup{Au} = \SI{196.97}{\gram\per\mol}$ (Quelle)
 von Gold aus
-\begin{equation*}
+\begin{equation}
   N_\symup{Au} = N_\symup{A} \cdot \frac{\rho_\symup{Au}}{M_\symup{Au}} = 5,907 \cdot 10^{28} \, 1/\symup{m^3}
-\end{equation*}
+  \label{eqn:teilchendichte}
+\end{equation}
 
 
 $\Delta x = 2 \cdot 10^{-6} \, \symup{m}$ ist die Dicke der Folie. Daraus können dann die
@@ -182,3 +183,33 @@ und der $\SI{4}{\micro\meter}$-Folie bei dem entsprechenden Winkel von $\Theta =
     \bottomrule
   \end{tabular}
 \end{table}
+
+
+\subsection{Untersuchung der Z-Abhängigkeit}
+Die untersuchten Elemente werden mit ihrer gemessenen Zählrate $I$ und der entsprechenden
+Foliendicke in Tabelle ... aufgeführt. Des weiteren sind die Dichte $\rho$ sowie die
+molare Masse $M$ der entsprechenden Stoffe und der daraus berechenbare Term $\frac{I}{N\cdot \Delta x}$
+angegeben. $N$ bezeichnet dabei die in einem der vorherigen Abschnitte bereits erwähnte Teilchendichte des entsprechendne Elements.
+Sie berechnet sich auch hier nach Gleichung \ref{eqn:teilchendichte} für die jeweiligen Stoffe.
+Der Winkel beträgt dabei $\Theta = 2 \, °$.
+\begin{table}[H]
+  \centering
+  \caption{Spezifische Angaben und Zählraten der Untersuchten Folien bei der Untersuchung der Z-Abhängigkeit (Quelle)}
+  \label{tab:stoffe}
+  \begin{tabular}{c c c c c c c}
+    \toprule
+     & Z & $\Delta x$/ \mu m & I / $\frac{1}{s}$ & $\rho/ \frac{g}{cm^3}$ & M/$\frac{g}{mol}$ & $\frac{I}{N\cdot \Delta x}$/$\cdot 10^{-23}\frac{m^2}{s}$ \\
+    \midrule
+    Gold & 79 & 4 & $\SI{3,44(11)}{}$ & 19,32 & 196.97 & $\SI{1.46(5)}{}$ \\
+    Aluminium & 13 & 3 & $\SI{14,16(22)}{}$ & 2,70 & 26.98 & $\SI{7.83(12)}{}$ \\
+    Bismut & 83 & 1 & $\SI{12,14(20)}{}$ & 9,80 & 208.98 & $\SI{42.99(71)}{}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/z.pdf}
+  \caption{blabal.}
+  \label{fig:zmessung}
+\end{figure}

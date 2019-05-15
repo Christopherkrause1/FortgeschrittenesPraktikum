@@ -63,6 +63,7 @@ plt.clf()
 
 
 #Mehrfachstreuung
+print('----------------------------------------------')
 dicke = 4 * 10**(-6)
 N = 1033
 t = 300
@@ -70,3 +71,27 @@ dWq = N/(t*N0*dichte*dicke*omega)
 err = np.sqrt((np.sqrt(N)/(t*N0*dichte*dicke*omega))**2 + (0.26/(t*N0*dichte*dicke*omega))**2)
 print(dWq)
 print(err)
+
+#Z-Abhängigkeit
+print('--------------------------------------------')
+I = np.array([3.44, 14.16, 12.14])
+Ierr = np.sqrt(I*300)/300
+rho = np.array([19.32, 2.70, 9.80]) * 10**6 #für in m
+M = np.array([196.97, 26.98, 208.98])
+x = np.array([4,3,1])*10**(-6)
+NA = 6.022*10**23
+
+N = NA * rho/M
+ziel = I/(N*x)
+ziel_err = Ierr/(N*x)
+print(ziel)
+print(ziel_err)
+
+z = np.array([79,13,83])
+
+plt.errorbar(z, ziel, yerr=ziel_err, fmt = 'x',color='r', markersize=3, capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='berechnete Werte')
+plt.legend()
+plt.grid()
+plt.ylabel(r'$\frac{I}{N\cdot \Delta x} / \frac{\mathrm{m^2}}{\mathrm{s}}$')
+plt.xlabel('Z')
+plt.savefig('build/z.pdf')
