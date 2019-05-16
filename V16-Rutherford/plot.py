@@ -21,7 +21,7 @@ print(params)
 print(np.sqrt(np.diag(covariance_matrix)))
 plt.gcf().subplots_adjust(bottom=0.18, left  = 0.14)
 plt.plot(p, U, 'k.', label='Mit Folie')
-#plt.errorbar(W, dWq, yerr=y_err, fmt = 'o',color='r', markersize=2, capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='berechnete Werte')
+plt.errorbar(p, U, yerr=F, fmt = 'o',color='r', markersize=2, capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5)
 
 
 params, covariance_matrix = curve_fit(f, p_2, U_2)
@@ -31,6 +31,7 @@ print(params)
 print(np.sqrt(np.diag(covariance_matrix)))
 plt.gcf().subplots_adjust(bottom=0.18, left  = 0.14)
 plt.plot(p_2, U_2, 'r.', label='ohne Folie')
+plt.errorbar(p_2, U_2, yerr=F_2, fmt = 'o',color='r', markersize=2, capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5)
 plt.legend()
 plt.grid()
 
