@@ -94,7 +94,7 @@ x_plot = np.linspace(0.01, 22,200)
 #print(np.sqrt(np.diag(covariance_matrix)))
 plt.gcf().subplots_adjust(bottom=0.18, left  = 0.14)
 plt.plot(x_plot, f_1(x_plot/360*2*np.pi), 'k-', label='Theoriekurve')
-plt.errorbar(W, dWq, yerr=y_err, fmt = 'o',color='r', markersize=2, capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='berechnete Werte')
+plt.errorbar(W, dWq, yerr=y_err, fmt = 'x',color='r', markersize=4, capsize=3, ecolor='b', elinewidth=0.5, markeredgewidth=0.75, label='berechnete Werte')
 plt.legend()
 plt.grid()
 plt.yscale('log')
@@ -120,12 +120,14 @@ print(err)
 print('--------------------------------------------')
 I = np.array([3.44, 14.16, 12.14])
 Ierr = np.sqrt(I*300)/300
+print(Ierr)
 rho = np.array([19.32, 2.70, 9.80]) * 10**6 #für in m
 M = np.array([196.97, 26.98, 208.98])
 x = np.array([4,3,1])*10**(-6)
 NA = 6.022*10**23
 
 N = NA * rho/M
+print(N)
 ziel = I/(N*x)
 ziel_err = Ierr/(N*x)
 print(ziel)
@@ -133,7 +135,7 @@ print(ziel_err)
 
 z = np.array([79,13,83])
 
-plt.errorbar(z, ziel, yerr=ziel_err, fmt = 'x',color='r', markersize=3, capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='berechnete Werte')
+plt.errorbar(z, ziel, yerr=ziel_err, fmt = 'x',color='r', markersize=4, capsize=3, ecolor='b', elinewidth=0.5, markeredgewidth=0.75, label='berechnete Werte')
 plt.legend()
 plt.grid()
 plt.ylabel(r'$\frac{I}{N\cdot \Delta x} / \frac{\mathrm{m^2}}{\mathrm{s}}$')
