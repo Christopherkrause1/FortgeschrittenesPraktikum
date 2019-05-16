@@ -13,7 +13,7 @@ p_2, U_2, F_2 = np.genfromtxt('pulshoeheohne.txt', unpack=True)
 def f(x, a, b):
     return a*x + b
 
-x_plot = np.linspace(0.08, 220)
+x_plot = np.linspace(0.05, 230)
 params, covariance_matrix = curve_fit(f, p, U)
 errors = np.sqrt(np.diag(covariance_matrix))
 plt.plot(x_plot, f(x_plot, *params), 'k-', label='Anpassungsfunktion', linewidth=0.5)
@@ -32,14 +32,15 @@ print(np.sqrt(np.diag(covariance_matrix)))
 plt.gcf().subplots_adjust(bottom=0.18, left  = 0.14)
 plt.plot(p_2, U_2, 'r.', label='ohne Folie')
 plt.errorbar(p_2, U_2, yerr=F_2, fmt = 'o',color='r', markersize=2, capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5)
+plt.xlim(0.07, 220)
 plt.legend()
 plt.grid()
 
 
 #plt.xlim(-0.2, 21)
 #plt.ylim(10**(-26), 10**(-12))
-plt.ylabel(r'$U/V$')
-plt.xlabel(r'$p / $mbar')
+plt.ylabel(r'$U\:/\:V$')
+plt.xlabel(r'$p \: / \:$mbar')
 plt.savefig('build/pulsmit.pdf')
 plt.clf()
 

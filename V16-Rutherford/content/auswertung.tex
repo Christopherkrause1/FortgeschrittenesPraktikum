@@ -25,7 +25,7 @@ Die Anstiegszeit des Signals mit Verstärker beträgt $\SI{1.3}{\micro\second}$ 
 
 
 \subsection{Bestimmung der Foliendicke}
-In Tabelle 1 sind die gemessenen Spannungen in Abhängigkeit des Kammerderuckes mit und ohne Goldfolie dargesellt.
+In Tabelle 1 sind die gemessenen Spannungen in Abhängigkeit des Kammerdruckes mit und ohne Goldfolie dargestellt.
 
 \begin{table}[H]
 \centering
@@ -63,7 +63,7 @@ In Tabelle 1 sind die gemessenen Spannungen in Abhängigkeit des Kammerderuckes 
   \end{tabular}
 \end{table}
 
-In Abbildung ... wird  die Spannung in Abhängigkeit des Druckes mit und ohne Goldfolie dargestellt. Dabei wird ein linearer
+In Abbildung 4 wird  die Spannung in Abhängigkeit des Druckes mit und ohne Goldfolie dargestellt. Dabei wird ein linearer
 Zusammenhang zwischen Druck und Spannung angenommen:
 \begin{align*}
   U = a \cdot p + b
@@ -71,8 +71,8 @@ Zusammenhang zwischen Druck und Spannung angenommen:
 
 \begin{figure}[H]
   \centering
-  \includegraphics[height=8cm]{build/pulsmit.pdf}
-  \caption{Gemessene Spannung in Abhängigkeit des Kammerdruckes.}
+  \includegraphics[height=10cm]{build/pulsmit.pdf}
+  \caption{gemessene Spannung in Abhängigkeit des Kammerdruckes.}
   \label{fig:ohne}
 \end{figure}
 
@@ -93,12 +93,35 @@ Für $\Delta x$ aus Gleichung (1) gilt damit:
 \end{align}
 
 Hierbei gilt für die Werte:
+%\begin{align*}
+%  &m_0= \SI{9.1093897e-31}{\kilogram} \\
+%  &m_{\symup{\alpha}} = \SI{6.64465723e-27}{\kilogram} \\
+%  &I_{\symup{Au}} = \SI{709}{\eV} \cite{sample4}\\
+%  &E_{\symup{ohne}} = \SI{5.486}{\mega\eV} \cite{sample3} \\
+%  &Z_{\symup{Au}} = 79 \\
+%  &N_{\symup{Au}} = \frac{Z \rho_{\symup{Au}}}{A \cdot u} = \SI{5.895e22}{\per\centi\meter\squared} \\
+%  &z_{\symup{\alpha}} = 2 \\
+%\end{align*}
+
+Mit der Massenzahl $A$, der Dichte von Gold $\rho_{\symup{Au}}$ und der atomaren Masseneinheit $u$.
+Für die Foliendicke ergibt sich:
 \begin{align*}
-  m_0= \SI{9.1093897e31}{\kilo\gram} \\
-  m_{\symup{\alpha}} = \SI{6.64465723e27}{\kilo\gram} \\
-  I_{\symup{Au}} = \SI{709}{\eV} \\
-  E_{\symup{ohne}} = \SI{5.486}{\mega\eV} \\
-  Z_{\symup{Au}} = 79
+  \Delta x = \SI{3.6(6)}{\micro\meter}
+\end{align*}
+
+Der Fehler wird dabei mit der Gaußschen Fehlerfortpflanzung ermittelt:
+\begin{align*}
+  \sigma_{\symup{x}} = \sqrt{\left(\frac{\partial \Delta x}{\partial b_{\symup{mit}}}\sigma_{\symup{b_{\symup{mit}}}}\right)^2 + \left(\frac{\partial \Delta x}{\partial b_{\symup{ohne}}}\sigma_{\symup{b_{ohne}}}\right)^2}
+\end{align*}
+
+\begin{align*}
+  \left(\frac{\partial \Delta x}{\partial b_{\symup{mit}}}\sigma_{\symup{b_{mit}}}\right)^2 = \sigma_{b_{\symup{mit}}}^{2} \left(- \frac{c \left(- \frac{b_{\symup{mit}}}{b_{\symup{ohne}}} + 1\right)}{b_{\symup{ohne}} \left(\frac{b_{\symup{mit}}}{b_{\symup{ohne}}} + 1\right) \ln^{2}{\left (d \left(\frac{b_{\symup{mit}}}{b_{\symup{ohne}}} + 1\right) \right )}} - \frac{c}{b_{\symup{ohne}} \ln{\left (d \left(\frac{b_{\symup{mit}}}{b_{\symup{ohne}}} + 1\right) \right )}}\right)^{2} \\
+  \left(\frac{\partial \Delta x}{\partial b_{\symup{ohne}}}\sigma_{\symup{b_{ohne}}}\right)^2 = \sigma_{b_{\symup{ohne}}}^{2} \left(\frac{b_{\symup{mit}} c \left(- \frac{b_{\symup{mit}}}{b_{\symup{ohne}}} + 1\right)}{b_{\symup{ohne}}^{2} \left(\frac{b_{\symup{mit}}}{b_{\symup{ohne}}} + 1\right) \ln^{2}{\left (d \left(\frac{b_{\symup{mit}}}{b_{\symup{ohne}}} + 1\right) \right )}} + \frac{b_{\symup{mit}} c}{b_{\symup{ohne}}^{2} \ln{\left (d \left(\frac{b_{\symup{mit}}}{b_{\symup{ohne}}} + 1\right) \right )}}\right)^{2}
+\end{align*}
+Mit den Werten:
+\begin{align*}
+  &c =  E_{\symup{ohne}} \frac{2 m_{\symup{0}} E_{\symup{\alpha}} (4 \pi \epsilon_0)^2}{4 \pi e^2 z_{\symup{\alpha}}  m_{\symup{\alpha}} N_{\symup{Au}} Z_{\symup{Au}}} \\
+  &d = \frac{2 E_{\symup{ohne}} m_{\symup{0}}}{m_{\symup{\alpha}} I_{\symup{Au}}}
 \end{align*}
 
 \subsection{Differentieller Wirkungsquerschnitt}
@@ -142,7 +165,7 @@ Dabei ist $I_0$ die Zählrate der Nullmessung ohne Folie und ergibt sich zu $I_0
 
 $\Delta \Omega$ bezeichnet den pyramidenartigen Raumwinkel, der von
 der effektiven Detektorfläche eingenommen wird. Um diesen zu berechnen, muss
-als erstes die effektive Detektorfläche selbst bestimmt werden. Dies geschieht
+als Erstes die effektive Detektorfläche selbst bestimmt werden. Dies geschieht
 mithilfe der Abbildung \ref{fig:aufbau}. Die gesuchte Breite $b$ und Höhe $h$ der
 besagten Fläche lassen sich berechnen aus
 
@@ -212,12 +235,12 @@ in Abhängigkeit vom Winkel $\Theta$ dargestellt.
   \end{tabular}
 \end{table}
 
-Die berechneten Werte und die Theoriekurve, welche sich aus Gleichung \ref{eqn:rutherford} ergibt, werden in Abbilung \ref{fig:wirkungsquerschnitt} dargestellt.
+Die berechneten Werte und die Theoriekurve, welche sich aus Gleichung \ref{eqn:rutherford} ergibt, werden in Abbildung \ref{fig:wirkungsquerschnitt} dargestellt.
 
 \begin{figure}[H]
   \centering
   \includegraphics{build/winkel.pdf}
-  \caption{Berechneter und gemessener differentieller Wirkungsquerschnitt.}
+  \caption{berechneter und gemessener differentieller Wirkungsquerschnitt}
   \label{fig:wirkungsquerschnitt}
 \end{figure}
 
@@ -230,7 +253,7 @@ eine Zählrate von
   N_\symup{4\mu m} = \SI{1033(32)}{1\per\second}
 \end{equation*}
 Daraus lässt sich entsprechend Gleichung \ref{eqn:wq} wieder der differentielle Wirkungsquerschnitt
-berechnen. In Tabelle \ref{tab:wq} sind nun die Wirkunsquerschnitte der $\SI{2}{\micro\meter}$-Folie
+berechnen. In Tabelle \ref{tab:wq} sind nun die Wirkungsquerschnitte der $\SI{2}{\micro\meter}$-Folie
 und der $\SI{4}{\micro\meter}$-Folie bei dem entsprechenden Winkel von $\Theta = 2 \, °$ aufgeführt.
 \begin{table}[H]
   \centering
@@ -248,9 +271,9 @@ und der $\SI{4}{\micro\meter}$-Folie bei dem entsprechenden Winkel von $\Theta =
 
 \subsection{Untersuchung der Z-Abhängigkeit}
 Die untersuchten Elemente werden mit ihrer gemessenen Zählrate $I$, der Ordnungszahl Z und der entsprechenden
-Foliendicke $\Delta x$ in Tabelle \ref{tab:stoffe} aufgeführt. Des weiteren sind die Dichte $\rho$ sowie die
+Foliendicke $\Delta x$ in Tabelle \ref{tab:stoffe} aufgeführt. Des Weiteren sind die Dichte $\rho$ sowie die
 molare Masse $M$ der entsprechenden Stoffe und der daraus berechenbare Term $\frac{I}{N\cdot \Delta x}$
-angegeben. $N$ bezeichnet dabei die in einem der vorherigen Abschnitte bereits erwähnte Teilchendichte des entsprechendne Elements.
+angegeben. $N$ bezeichnet dabei die in einem der vorherigen Abschnitte bereits erwähnte Teilchendichte des entsprechenden Elements.
 Sie berechnet sich auch hier nach Gleichung \ref{eqn:teilchendichte} für die jeweiligen Stoffe.
 Der Winkel beträgt dabei $\Theta = 2 \, °$.
 \begin{table}[H]
