@@ -63,9 +63,26 @@ In Tabelle 1 sind die gemessenen Spannungen in Abhängigkeit des Kammerderuckes 
   \end{tabular}
 \end{table}
 
+In Abbildung ... wird  die Spannung in Abhängigkeit des Druckes mit und ohne Goldfolie dargestellt. Dabei wird ein linearer
+Zusammenhang zwischen Druck und Spannung angenommen:
+\begin{align*}
+  U = a \cdot p + b
+\end{align*}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=8cm]{build/pulsmit.pdf}
+  \caption{Gemessene Spannung in Abhängigkeit des Kammerdruckes.}
+  \label{fig:ohne}
+\end{figure}
 
-
+Die Parameter der Funktion mit und ohne Folie betragen:
+\begin{align*}
+  &a_{\symup{mit}} = \SI{-0.0117(2)}{\volt\per\milli\bar}  \\
+  &b_{\symup{mit}} = \SI{2.6(2)}{\volt}  \\
+  &a_{\symup{ohne}}= \SI{-0.0123(4)}{\volt\per\milli\bar}  \\
+  &b_{\symup{ohne}} = \SI{ 3.82(5)}{\volt} \\
+\end{align*}
 
 \subsection{Differentieller Wirkungsquerschnitt}
 In Tabelle 2 wird die Zählrate $N$ in Abhängigkeit des Winkels $\Theta$ und der Messzeit $t$ dargestellt.
@@ -148,8 +165,35 @@ von Gold aus
 
 
 $\Delta x = 2 \cdot 10^{-6} \, \symup{m}$ ist die Dicke der Folie. Daraus können dann die
-differentiellen Wirkungsquerschnitte berechnet werden. Die Ergebnisse sind in Tabelle (...)
+differentiellen Wirkungsquerschnitte berechnet werden. Die Ergebnisse sind in Tabelle 3
 in Abhängigkeit vom Winkel $\Theta$ dargestellt.
+
+
+\begin{table}[H]
+  \centering
+  \caption{Berechnete differentieller Wirkungsquerschnitte}
+  \label{tab:Parameter}
+  \begin{tabular}{c c c}
+    \toprule
+    $\Theta/$° & $\frac{\symup{d}\sigma}{\symup{d}\Omega}/ \mathrm{10^{-22}cm^2}$ & Fehler $/ \mathrm{10^{-24}cm^2}$  \\
+    \midrule
+     0  &  3.81867724      & 8.10664055  \\
+     1  &  3.64830814      & 7.92374526  \\
+     2  &  3.00813331      & 7.19506567  \\
+     3  &  2.54176939      & 6.61387278  \\
+     4  &  1.93199714      & 4.70808345  \\
+     5  &  1.51095026      & 4.16359449  \\
+     6  &  1.04802814      & 3.00304162  \\
+     7  &  0.687786392     & 1.98635208  \\
+     8  &  0.438255883     & 1.58562428  \\
+    10  &  0.297715711     & 1.30691203  \\
+    12  &  0.132509305     & 0.871974777 \\
+    15  &  0.0476115684    & 0.522817634 \\
+    18  &  0.0195035341    & 0.334815200 \\
+    20  &  0.0143408339    & 0.287204192 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
 
 Die berechneten Werte und die Theoriekurve, welche sich aus Gleichung \ref{eqn:rutherford} ergibt, werden in Abbilung \ref{fig:wirkungsquerschnitt} dargestellt.
 
@@ -177,7 +221,7 @@ und der $\SI{4}{\micro\meter}$-Folie bei dem entsprechenden Winkel von $\Theta =
   \label{tab:wq}
   \begin{tabular}{c c }
     \toprule
-    $\frac{\symup{d}\sigma}{\symup{d}\Omega}_\symup{2\mu m} / \cdot 10^{-23}\, m$ & $\frac{\symup{d}\sigma}{\symup{d}\Omega}_\symup{4\mu m}/ \cdot 10^{-23}\, m$ \\
+    $\frac{\symup{d}\sigma}{\symup{d}\Omega}_\symup{2\mu m} /  10^{-23}\, \mathrm{m}$ & $\frac{\symup{d}\sigma}{\symup{d}\Omega}_\symup{4\mu m}/ 10^{-23}\, \mathrm{m}$ \\
     \midrule
     $\SI{30.08(72)}{}$ & $\SI{5.93(18)}{}$  \\
     \bottomrule
@@ -187,7 +231,7 @@ und der $\SI{4}{\micro\meter}$-Folie bei dem entsprechenden Winkel von $\Theta =
 
 \subsection{Untersuchung der Z-Abhängigkeit}
 Die untersuchten Elemente werden mit ihrer gemessenen Zählrate $I$ und der entsprechenden
-Foliendicke in Tabelle ... aufgeführt. Des weiteren sind die Dichte $\rho$ sowie die
+Foliendicke in Tabelle 4 aufgeführt. Des weiteren sind die Dichte $\rho$ sowie die
 molare Masse $M$ der entsprechenden Stoffe und der daraus berechenbare Term $\frac{I}{N\cdot \Delta x}$
 angegeben. $N$ bezeichnet dabei die in einem der vorherigen Abschnitte bereits erwähnte Teilchendichte des entsprechendne Elements.
 Sie berechnet sich auch hier nach Gleichung \ref{eqn:teilchendichte} für die jeweiligen Stoffe.
@@ -198,7 +242,7 @@ Der Winkel beträgt dabei $\Theta = 2 \, °$.
   \label{tab:stoffe}
   \begin{tabular}{c c c c c c c}
     \toprule
-     & Z & $\Delta x$/ \mu m & I / $\frac{1}{s}$ & $\rho/ \frac{g}{cm^3}$ & M/$\frac{g}{mol}$ & $\frac{I}{N\cdot \Delta x}$/$\cdot 10^{-23}\frac{m^2}{s}$ \\
+     & Z & $\Delta x/ \mathrm{\mu m}$ & I / $\frac{1}{\mathrm{s}}$ & $\rho/ \mathrm{\frac{g}{cm^3}}$ & M/$\mathrm{\frac{g}{mol}}$ & $\frac{I}{N\cdot \Delta x}$/$ 10^{-23}\ \mathrm{\frac{m^2}{s}}$ \\
     \midrule
     Gold & 79 & 4 & $\SI{3,44(11)}{}$ & 19,32 & 196.97 & $\SI{1.46(5)}{}$ \\
     Aluminium & 13 & 3 & $\SI{14,16(22)}{}$ & 2,70 & 26.98 & $\SI{7.83(12)}{}$ \\

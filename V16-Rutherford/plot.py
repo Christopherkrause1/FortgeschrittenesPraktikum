@@ -6,6 +6,49 @@ from uncertainties import ufloat
 from uncertainties.umath import *
 import uncertainties.unumpy as unp
 
+
+p, U, F = np.genfromtxt('pulshoehemit.txt', unpack=True)
+p_2, U_2, F_2 = np.genfromtxt('pulshoeheohne.txt', unpack=True)
+
+def f(x, a, b):
+    return a*x + b
+
+x_plot = np.linspace(0.08, 220)
+params, covariance_matrix = curve_fit(f, p, U)
+errors = np.sqrt(np.diag(covariance_matrix))
+plt.plot(x_plot, f(x_plot, *params), 'k-', label='Anpassungsfunktion', linewidth=0.5)
+print(params)
+print(np.sqrt(np.diag(covariance_matrix)))
+plt.gcf().subplots_adjust(bottom=0.18, left  = 0.14)
+plt.plot(p, U, 'k.', label='Mit Folie')
+#plt.errorbar(W, dWq, yerr=y_err, fmt = 'o',color='r', markersize=2, capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='berechnete Werte')
+
+
+params, covariance_matrix = curve_fit(f, p_2, U_2)
+errors = np.sqrt(np.diag(covariance_matrix))
+plt.plot(x_plot, f(x_plot, *params), 'r-', label='Anpassungsfunktion', linewidth=0.5)
+print(params)
+print(np.sqrt(np.diag(covariance_matrix)))
+plt.gcf().subplots_adjust(bottom=0.18, left  = 0.14)
+plt.plot(p_2, U_2, 'r.', label='ohne Folie')
+plt.legend()
+plt.grid()
+
+
+#plt.xlim(-0.2, 21)
+#plt.ylim(10**(-26), 10**(-12))
+plt.ylabel(r'$U/V$')
+plt.xlabel(r'$p / $mbar')
+plt.savefig('build/pulsmit.pdf')
+plt.clf()
+
+
+
+
+
+
+
+
 N, W, t = np.genfromtxt('winkel.txt', unpack=True)
 N0 = 6249/300
 #print(N0, '+-', np.sqrt(6249)/300)
@@ -56,7 +99,7 @@ plt.grid()
 plt.yscale('log')
 plt.xlim(-0.2, 21)
 plt.ylim(10**(-26), 10**(-12))
-plt.ylabel(r'$\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega}/ \mathrm{cm^2}$')
+plt.ylabel(r'$\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega}/ \left(\mathrm{cm^2}\right)$')
 plt.xlabel(r'$\Theta / $°')
 plt.savefig('build/winkel.pdf')
 plt.clf()
