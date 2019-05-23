@@ -1,0 +1,32 @@
+\section{Theorie}
+\label{sec:Theorie}
+
+\cite{sample}
+Die Tomographie ist ein bildgebendes Verfahren um ein räumliches Bild von inneren Strukturen
+eines Körpers zu erlangen. Dabei wird der Körper aus verschiedenen Positionen mit
+Gamma-Strahlen bestrahlt. Besteht der Körper aus unterschiedlichen Elementen und Verbindungen,
+so werden die Strahlen unterschiedlich stark absorbiert. Für die Ausgangsintensität $I$
+der Strahlung gilt:
+\begin{align}
+  &I=I_{\symup{0}} \exp{-\Sigma \mu_{\symup{i}} d_{\symup{i}}} \\
+  \Rightarrow &\Sigma \mu_{\symup{i}} d_{\symup{i}} = \ln{\frac{I_{\symup{0}}}{I}}
+\end{align}
+Mit der Anfangsintensität $I_{\symup{0}}$, den Schichtdicken $d_{\symup{i}}$
+und den Absorptionskoeffizienten $\mu_{\symup{i}}$.
+Gleichung (2) gilt für jede Projektion, wodurch ein Gleichungssystem entsteht. Um eine höhere
+Messgenauigkeit zu erhalten sollten mehr Projektion gemacht werden, als es
+Materialien im Würfel gibt.
+
+Die Absorptionskoeffizienten $\mu_{\symup{j}}$ werden bestimmt durch:
+\begin{align}
+  \mu_{\symup{j}} = \left[\left(\symbf{A^T} \cdot \symbf{A})\right)^{-1} \symbf{A^T}\right]_{\symup{j}} \cdot \ln{\frac{I_{\symup{0}}}{I_{\symup{j}}}}
+\end{align}
+Die Matrix $\symbf{A}$ hängt hierbei von der Würfelgeometrie und den Projektionen ab.
+
+Die Abschwächung von Gamma-Strahlen kann durch 3 verschiedene Prozesse eintreten.
+$\symbf{1.}$ Photoeffekt: Die Photonen regen ein Elektron an und geben ihre vollständigr Energie an diese ab.
+$\symbf{2.}$ Comptoneffekt: Die Photonen streuen an den Elektronen, wodurch ein Teil oihrer Energie
+an die Elektronen abgegeben wird.
+$\symbf{3.}$ Paarbildung: In der Nähe der Atomkerne können die Photonen sich in ein Elektron und ein Positron
+umwandeln. Dies geht jedoch nur, wenn die Photonen mindestens eine Ruhenenergie von 2 Elektronen
+haben.
