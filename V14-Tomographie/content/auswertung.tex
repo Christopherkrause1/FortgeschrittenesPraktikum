@@ -20,7 +20,7 @@ ist dann in einem Bereich um Channel 127 zu erkennen. Dieser hat eine gewisse Br
 weshalb im Folgenden die Zählraten durch Integration über eben diesen Bereich im
 entsprechenden Spektrum ermittelt werden.
 
-\subsection{Abschwächung des ersten Würfels}
+\subsection{Abschwächung des Aluminiumwürfels}
 Die gemessenen Counts $N$ des ersten Würfels, sowie die daraus resultierenden Zählraten  $I_{0,\mathrm{i}}$ bei einer Messung
 über $\SI{20}{\second}$ sind in Tabelle \ref{tab:w1} dargestellt.
 
@@ -30,7 +30,7 @@ Die gemessenen Counts $N$ des ersten Würfels, sowie die daraus resultierenden Z
   \label{tab:w1}
   \begin{tabular}{c c c}
     \toprule
-    Projektion & $N$ & $I_{0,\mathrm{i}}$   \\
+    Projektion & $N$ & $I_{0,\mathrm{i}} / \frac{1}{\symup{s}}$  \\
     \midrule
         $I_1$    & $\SI{16161(152)}{}$ & $\SI{161.61(152)}{}$    \\
         $I_2$    & $\SI{16165(151)}{}$ & $\SI{161.65(151)}{}$    \\
@@ -48,13 +48,15 @@ Die gemessenen Counts $N$ des ersten Würfels, sowie die daraus resultierenden Z
   \end{tabular}
 \end{table}
 
-Die $I_{0,\mathrm{i}}$ sind für die weiteren Berechnungen die Ausgangszählraten.
+Die $I_{0,\mathrm{i}}$ sind für die weiteren Berechnungen die Ausgangszählraten,
+da alle anderen Würfel von einem Aluminiumwürfel ummantelt sind.
 
 
 \subsection{Abschwächungskoeffizienten des zweiten Würfels}
 
 Die vier gemessenen Zählraten $N_\symup{i}$ sind mit ihrer zugehörigen Projektion in Tabelle
-\ref{tab:w2} aufgeführt. Die Messdauer beträgt $\SI{300}{\second}$.
+\ref{tab:w2} aufgeführt. Die Zuordnung der Projektionen entspricht derjenigen aus dem
+vorherigen Abschnitt. Die Messdauer beträgt $\SI{300}{\second}$.
 
 \begin{table}[H]
   \centering
@@ -62,15 +64,89 @@ Die vier gemessenen Zählraten $N_\symup{i}$ sind mit ihrer zugehörigen Projekt
   \label{tab:w2}
   \begin{tabular}{c c}
     \toprule
-    Projektion & $N_{0,\mathrm{i}}$   \\
+    Projektion & $N_{\mathrm{i}} / \frac{1}{\symup{s}}$   \\
     \midrule
         $I_1$    & $\SI{25.56(36)}{}$ \\
         $I_2$    & $\SI{24.04(36)}{}$ \\
-        $I_5$    & $\SI{18.81(32)}{}$ \\
-        $I_6$    & $\SI{17.13(31)}{}$ \\
+        $I_5$    & $\SI{17.13(31)}{}$ \\
+        $I_6$    & $\SI{18.81(32)}{}$ \\
     \bottomrule
   \end{tabular}
 \end{table}
+
+Daraus lassen sich nach Gleichung \ref{eqn:mu} die Absorptionskoeffizienten bestimmen.
+Die Kantenlänge des inneren Würfels beträgt $\SI{3}{\centi\meter}$.
+Die Ergebnisse sind in Tabelle \ref{tab:mu2} aufgeführt.
+
+\begin{table}[H]
+  \centering
+  \caption{Berechnete Absorptionskoeffizienten des zweiten Würfels in Abhängigkeit der Projektion}
+  \label{tab:mu2}
+  \begin{tabular}{c c}
+    \toprule
+    Projektion & $\mu_{\mathrm{i}} / \frac{1}{\symup{s}}$   \\
+    \midrule
+        $I_1$    & $\SI{0.615(6)}{}$ \\
+        $I_2$    & $\SI{0.635(6)}{}$ \\
+        $I_5$    & $\SI{0.522(5)}{}$ \\
+        $I_6$    & $\SI{0.755(7)}{}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Es ergibt sich ein Mittelwert von:
+\begin{equation*}
+  \bar\mu_2 = \SI{0.632(3)}{1\per\centi\meter}
+\end{equation*}
+
+
+\subsection{Abschwächungskoeffizienten des dritten Würfels}
+
+Die vier gemessenen Zählraten $N_\symup{i}$ sind mit ihrer zugehörigen Projektion in Tabelle
+\ref{tab:w3} aufgeführt. Die Zuordnung der Projektionen entspricht derjenigen aus dem
+vorherigen Abschnitt. Die Messdauer beträgt $\SI{300}{\second}$.
+
+\begin{table}[H]
+  \centering
+  \caption{Zählraten des dritten Würfels in Abhängigkeit der Projektion bei einer Messdauer von $\SI{300}{\second}$ }
+  \label{tab:w3}
+  \begin{tabular}{c c}
+    \toprule
+    Projektion & $N_{\mathrm{i}} / \frac{1}{\symup{s}}$   \\
+    \midrule
+        $I_1$    & $\SI{109.66(75)}{}$ \\
+        $I_2$    & $\SI{107.91(75)}{}$ \\
+        $I_5$    & $\SI{102.99(73)}{}$ \\
+        $I_6$    & $\SI{97.85(71)}{}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Daraus lassen sich wieder nach Gleichung \ref{eqn:mu} die Absorptionskoeffizienten bestimmen.
+Die Kantenlänge des inneren Würfels beträgt auch hier $\SI{3}{\centi\meter}$.
+Die Ergebnisse sind in Tabelle \ref{tab:mu3} aufgeführt.
+
+\begin{table}[H]
+  \centering
+  \caption{Berechnete Absorptionskoeffizienten des dritten Würfels in Abhängigkeit der Projektion}
+  \label{tab:mu3}
+  \begin{tabular}{c c}
+    \toprule
+    Projektion & $\mu_{\mathrm{i}} / \frac{1}{\symup{s}}$   \\
+    \midrule
+        $I_1$    & $\SI{0.129(4)}{}$ \\
+        $I_2$    & $\SI{0.135(4)}{}$ \\
+        $I_5$    & $\SI{0.099(3)}{}$ \\
+        $I_6$    & $\SI{0.172(4)}{}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Es ergibt sich ein Mittelwert von:
+\begin{equation*}
+  \bar\mu_3 = \SI{0.134(2)}{1\per\centi\meter}
+\end{equation*}
+
 
 \subsection{Abschwächungskoeffizienten des vierten Würfels}
 Die Abschwächungskoeffizienten der einzelenen Materialien werden mit Gleichung (3) bestimmt. Die Dicke
