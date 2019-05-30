@@ -184,3 +184,30 @@ die daraus berechneten Abschwächungskoeffizienten dargestellt.
     \bottomrule
   \end{tabular}
 \end{table}
+<<<<<<< HEAD
+||||||| merged common ancestors
+
+
+\begin{figure}
+  \centering
+  \includegraphics{plot.pdf}
+  \caption{Plot.}
+  \label{fig:plot}
+\end{figure}
+=======
+
+Die Fehler der Abschwächungskoeffizienten werden dabei mit der Gaußschen Fehlerfortpflanzung von Python berechnet.
+\begin{equation}
+  \sigma_f = \sqrt{
+      \sum\limits_{i = 1}^N
+       \left( \frac{\partial f}{\partial x_i} \sigma_i \right)^{\!\! 2}
+     }
+\end{equation}
+
+\begin{figure}
+  \centering
+  \includegraphics{plot.pdf}
+  \caption{Plot.}
+  \label{fig:plot}
+\end{figure}
+>>>>>>> irgendwas halt
