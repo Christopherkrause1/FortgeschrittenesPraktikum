@@ -94,6 +94,12 @@ Die Ergebnisse sind in Tabelle \ref{tab:mu2} aufgeführt.
   \end{tabular}
 \end{table}
 
+Die Fehler werden hier nach der Gauß'schen Fehlerfortpflanzung bestimmit:
+\begin{equation*}
+  \sigma_{\mu_{\mathrm{i}}} = \sqrt{\left(\frac{1}{d\cdot I_{0,\mathrm{i}}} \cdot \sigma_{I_{0,\mathrm{i}}} \right)^2 + \left( \frac{1}{d\cdot I_{0,\mathrm{i}} \cdot N_{\mathrm{i}}}
+  \cdot \sigma_{N_{\mathrm{i}}} \right)^2}
+\end{equation*}
+
 Es ergibt sich ein Mittelwert von:
 \begin{equation*}
   \bar\mu_2 = \SI{0.632(3)}{1\per\centi\meter}
@@ -142,6 +148,8 @@ Die Ergebnisse sind in Tabelle \ref{tab:mu3} aufgeführt.
   \end{tabular}
 \end{table}
 
+Die Fehler werden auch hier nach der Gauß'schen Fehlerfortpflanzung bestimmt.
+
 Es ergibt sich ein Mittelwert von:
 \begin{equation*}
   \bar\mu_3 = \SI{0.134(2)}{1\per\centi\meter}
@@ -176,11 +184,3 @@ die daraus berechneten Abschwächungskoeffizienten dargestellt.
     \bottomrule
   \end{tabular}
 \end{table}
-
-
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
