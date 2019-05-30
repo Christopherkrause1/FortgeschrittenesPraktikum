@@ -157,44 +157,74 @@ Es ergibt sich ein Mittelwert von:
 
 
 \subsection{Abschwächungskoeffizienten des vierten Würfels}
-Die Abschwächungskoeffizienten der einzelenen Materialien werden mit Gleichung (3) bestimmt. Die Dicke
-der Elementarwürfel beträgt dabei $d=\SI{1}{\centi\meter}$. In Tabelle (?) werden die gemessenen Zählraten und
+In Tabelle \ref{tab:mu} werden die gemessenen Zählraten und
 die daraus berechneten Abschwächungskoeffizienten dargestellt.
 
 \begin{table}[H]
   \centering
-  \caption{Zählrate in Abhängigkeit der Projektion bei einer Messdauer von $\SI{300}{\second}$ und und Abschwächungskoeffizienten }
-  \label{tab:Parameter}
-  \begin{tabular}{c c c | c c}
+  \caption{Zählrate in Abhängigkeit der Projektion bei einer Messdauer von $\SI{300}{\second}$}
+  \label{tab:mu}
+  \begin{tabular}{c c c}
     \toprule
-    Projektion & $N$ & Fehler & $\mu$ & Fehler   \\
+    Projektion & $N$ & Fehler   \\
     \midrule
-        $I_1$    & 16161 & 152 & &    \\
-        $I_2$    & 16165 & 151 & &    \\
-        $I_3$    & 16218 & 151 & &    \\
-        $I_4$    & 15596 & 151 & &    \\
-        $I_5$    & 15662 & 151 & &    \\
-        $I_6$    & 15899 & 152 & &    \\
-        $I_7$    & 15997 & 153 & &    \\
-        $I_8$    & 16187 & 152 & &    \\
-        $I_9$    & 16213 & 153 & &    \\
-        $I_{10}$ & 15509 & 151 & &   \\
-        $I_{11}$ & 15725 & 151 & &    \\
-        $I_{12}$ & 15605 & 152 & &    \\
+        $I_1$    & 16161 & 152    \\
+        $I_2$    & 16165 & 151    \\
+        $I_3$    & 16218 & 151    \\
+        $I_4$    & 15596 & 151    \\
+        $I_5$    & 15662 & 151    \\
+        $I_6$    & 15899 & 152    \\
+        $I_7$    & 15997 & 153    \\
+        $I_8$    & 16187 & 152    \\
+        $I_9$    & 16213 & 153    \\
+        $I_{10}$ & 15509 & 151   \\
+        $I_{11}$ & 15725 & 151    \\
+        $I_{12}$ & 15605 & 152    \\
     \bottomrule
   \end{tabular}
 \end{table}
-<<<<<<< HEAD
-||||||| merged common ancestors
 
+Für die Matrix $A$ der zwölf Projektionen gilt hierbei:
+$$ A =
+\left( \begin{matrix}
+       1       & 1 &       1 &       0 &        0 &       0 &       0 &       0 &        0      \\
+       0       & 0 &       0 &       1 &        1 &       1 &       0 &       0 &        0      \\
+       0       & 0 &       0 &       0 &        0 &       0 &       1 &       1 &        1      \\
+       0       & 0 &       0 &       0 &        0 &       \sqrt{2}& 0 &       \sqrt{2}&  0      \\
+       0       & 0 &       \sqrt{2}& 0 &        \sqrt{2}& 0 &      \sqrt{2}&  0 &       0      \\
+       0       & \sqrt{2}& 0 &      \sqrt{2}&   0 &       0 &       0 &       0 &       0      \\
+       1       & 0 &       0 &       1 &        0 &       0 &       0 &       1 &       0      \\
+       0       & 1 &       0 &       0 &        1 &       0 &       0 &       1 &       0      \\
+       0       & 0 &       1 &       0 &        0 &       1 &       0 &       0 &       1      \\
+       0       & \sqrt{2}& 0 &       0 &        0 &       \sqrt{2}& 0 &       0 &       0      \\
+       \sqrt{2}& 0 &       0 &       0 &        \sqrt{2}& 0 &       0 &       0 &       \sqrt{2}      \\
+       0       & 0 &       0 &       \sqrt{2}&  0 &       0 &       0 &       \sqrt{2} & 0
+\end{matrix} \right)
+$$
 
-\begin{figure}
+Die Abschwächungskoeffizienten der einzelenen Materialien werden mit Gleichung (3) bestimmt und sind in Tabelle \ref{tab:blob} dargestellt.
+Die Dicke der Elementarwürfel beträgt dabei $d=\SI{1}{\centi\meter}$.
+\begin{table}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
-=======
+  \caption{Abschwächungskoeffizienten und zugehörigen Fehler des vierten Würfels}
+  \label{tab:blob}
+  \begin{tabular}{c c}
+    \toprule
+    $\mu/ \mathrm{\frac{1}{cm}}$ & Fehler   \\
+    \midrule
+    0.204      &  0.009 \\
+    0.404      &  0.006 \\
+    0.304      &  0.009 \\
+    0.458      &  0.006 \\
+    0.311      &  0.007 \\
+    0.082      &  0.006 \\
+    0.381      &  0.012 \\
+    0.056      &  0.006 \\
+    0.319      &  0.009 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 
 Die Fehler der Abschwächungskoeffizienten werden dabei mit der Gaußschen Fehlerfortpflanzung von Python berechnet.
 \begin{equation}
@@ -204,10 +234,15 @@ Die Fehler der Abschwächungskoeffizienten werden dabei mit der Gaußschen Fehle
      }
 \end{equation}
 
+Für den fehler der einzelnen Absorptionskoeffizienten $\mu_{\mathrm{i}}= \symbf{\tilde{A}} \cdot I_{\mathrm{i}}$ gilt:
+\begin{align*}
+  \sigma_{\mu_i} = \left(\sqrt{\frac{\symbf{\tilde{A}}^2 \sigma_{N}^2}{N^2} + \frac{\symbf{\tilde{A}}^{2} \sigma_{I_{0}}^2}{I_{0}^2}}\right)_i \\
+  \text{mit}\:\: \symbf{\tilde{A}} = \left(\symbf{A^T} \cdot \symbf{A}\right)^{-1} \symbf{A^T}
+\end{align*}
+
 \begin{figure}
   \centering
   \includegraphics{plot.pdf}
   \caption{Plot.}
   \label{fig:plot}
 \end{figure}
->>>>>>> irgendwas halt
