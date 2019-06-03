@@ -54,8 +54,11 @@ plt.clf()
 N, W, t = np.genfromtxt('winkel.txt', unpack=True)
 N0 = 6249/300
 #print(N0, '+-', np.sqrt(6249)/300)
+#print('------------------------------------------')
+#print('Zaehlraten:')
 #print(N/t)
-
+#print(np.sqrt(N)/t)
+#print('------------------------------------------')
 #effektive Detektorfläche:
 #Breite
 a = 2
@@ -87,6 +90,11 @@ print(y_err)
 def f_1(y):
    return 1/(4*np.pi*8.854*10**(-12))**2 *((2*79*1.602*10**(-19)) /(4*5.638*10**6))**2 * 1/(np.sin(y/2))**4
 
+x_num = np.linspace(0,20,21)
+print('---------------------------')
+print('Werte für Tabelle:')
+print(f_1(x_num/360*2*np.pi))
+print('----------------------------')
 x_plot = np.linspace(0.01, 22,200)
 #params, covariance_matrix = curve_fit(f_1, W)
 #errors = np.sqrt(np.diag(covariance_matrix))

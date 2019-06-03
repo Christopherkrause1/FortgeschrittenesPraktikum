@@ -135,31 +135,32 @@ Mit den Werten:
 
 \subsection{Differentieller Wirkungsquerschnitt}
 \label{sec:wq}
-In Tabelle 2 wird die Zählrate $N$ in Abhängigkeit des Winkels $\Theta$ und der Messzeit $t$ dargestellt.
+In Tabelle 2 werden die Anzahl der gemessenen Ereignisse $N$ in Abhängigkeit des Winkels $\Theta$ und der Messzeit $t$
+sowie die daraus resultierende Zählrate $I$ dargestellt.
 
 
 \begin{table}[H]
   \centering
-  \caption{Zählrate in Abhängigkeit von Winkel und Messzeit}
+  \caption{Zählrate in Abhängigkeit von Winkel und Messzeit.}
   \label{tab:Parameter}
-  \begin{tabular}{c c c}
+  \begin{tabular}{c c c c}
     \toprule
-    N & $\Theta/$° & $t$ /s\\
+    N & $\Theta/$° & $t$ /s & $I / \frac{1}{s}$\\
     \midrule
-    2219 &  0 & 200 \\
-    2120 &  1 & 200 \\
-    1748 &  2 & 200 \\
-    1477 &  3 & 200 \\
-    1684 &  4 & 300 \\
-    1317 &  5 & 300 \\
-    1218 &  6 & 400 \\
-    1199 &  7 & 600 \\
-     764 &  8 & 600 \\
-     519 & 10 & 600 \\
-     231 & 12 & 600 \\
-      83 & 15 & 600 \\
-      34 & 18 & 600 \\
-      25 & 20 & 600 \\
+    $\SI{2219(47)}{}$ &  0 & 200 & $\SI{12.00(24)}{}$ \\
+    $\SI{2120(46)}{}$ &  1 & 200 & $\SI{10.60(23)}{}$ \\
+    $\SI{1748(42)}{}$ &  2 & 200 & $\SI{8.74(21)}{}$ \\
+    $\SI{1477(38)}{}$ &  3 & 200 & $\SI{7.39(19)}{}$ \\
+    $\SI{1684(41)}{}$ &  4 & 300 & $\SI{5.61(14)}{}$ \\
+    $\SI{1317(36)}{}$ &  5 & 300 & $\SI{4.39(12)}{}$ \\
+    $\SI{1218(35)}{}$ &  6 & 400 & $\SI{3.05(9)}{}$ \\
+    $\SI{1199(35)}{}$ &  7 & 600 & $\SI{2.00(6)}{}$ \\
+    $\SI{764(28)}{}$  &  8 & 600 & $\SI{1.27(5)}{}$ \\
+    $\SI{519(23)}{}$  & 10 & 600 & $\SI{0.87(4)}{}$ \\
+    $\SI{231(15)}{}$  & 12 & 600 & $\SI{0.39(3)}{}$ \\
+    $\SI{83(9)}{}$    & 15 & 600 & $\SI{0.14(2)}{}$ \\
+    $\SI{34(6)}{}$    & 18 & 600 & $\SI{0.06(1)}{}$ \\
+    $\SI{25(5)}{}$    & 20 & 600 & $\SI{0.04(1)}{}$ \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -216,31 +217,33 @@ von Gold aus
 
 $\Delta x = 2 \cdot 10^{-6} \, \symup{m}$ ist die Dicke der Folie. Daraus können dann die
 differentiellen Wirkungsquerschnitte berechnet werden. Die Ergebnisse sind in Tabelle 3
-in Abhängigkeit vom Winkel $\Theta$ dargestellt.
+in Abhängigkeit vom Winkel $\Theta$ dargestellt. Außerdem werden auch die nach
+Gleichung \ref{eqn:rutherford} berechneten theoretischen Werte für die entsprechenden
+Winkeln aufgeführt.
 
 
 \begin{table}[H]
   \centering
-  \caption{Berechnete differentielle Wirkungsquerschnitte}
+  \caption{Berechnete und theoretische differentielle Wirkungsquerschnitte}
   \label{tab:Parameter}
-  \begin{tabular}{c c}
+  \begin{tabular}{c c c}
     \toprule
-    $\Theta/$° & $\frac{\symup{d}\sigma}{\symup{d}\Omega}/ \mathrm{10^{-22}m^2}$ \\
+    $\Theta/$° & $\frac{\symup{d}\sigma}{\symup{d}\Omega}/ \mathrm{10^{-22}m^2}$ & $\frac{\symup{d}\sigma}{\symup{d}\Omega}_{\mathrm{theo}}/ \mathrm{10^{-22}m^2}$ \\
     \midrule
-     0  &  $\SI{3.819(94)}{}$  \\
-     1  &  $\SI{3.648(91)}{}$  \\
-     2  &  $\SI{3.008(81)}{}$  \\
-     3  &  $\SI{2.542(73)}{}$  \\
-     4  &  $\SI{1.932(53)}{}$  \\
-     5  &  $\SI{1.511(46)}{}$  \\
-     6  &  $\SI{1.048(33)}{}$  \\
-     7  &  $\SI{0.688(22)}{}$  \\
-     8  &  $\SI{0.438(17)}{}$  \\
-    10  &  $\SI{0.298(14)}{}$  \\
-    12  &  $\SI{0.133(9)}{}$  \\
-    15  &  $\SI{0.048(5)}{}$  \\
-    18  &  $\SI{0.020(3)}{}$  \\
-    20  &  $\SI{0.014(3)}{}$  \\
+     0  &  $\SI{3.819(94)}{}$ & inf \\
+     1  &  $\SI{3.648(91)}{}$ & $\SI{175.470}{}$ \\
+     2  &  $\SI{3.008(81)}{}$ & $\SI{10.969}{}$ \\
+     3  &  $\SI{2.542(73)}{}$ & $\SI{2.167}{}$ \\
+     4  &  $\SI{1.932(53)}{}$ & $\SI{0.686}{}$ \\
+     5  &  $\SI{1.511(46)}{}$ & $\SI{0.281}{}$ \\
+     6  &  $\SI{1.048(33)}{}$ & $\SI{0.136}{}$ \\
+     7  &  $\SI{0.688(22)}{}$ & $\SI{0.073}{}$\\
+     8  &  $\SI{0.438(17)}{}$ & $\SI{0.043}{}$\\
+    10  &  $\SI{0.298(14)}{}$ & $\SI{0.018}{}$\\
+    12  &  $\SI{0.133(9)}{}$  & $\SI{0.009}{}$\\
+    15  &  $\SI{0.048(5)}{}$  & $\SI{0.004}{}$\\
+    18  &  $\SI{0.020(3)}{}$  & $\SI{0.002}{}$\\
+    20  &  $\SI{0.014(3)}{}$  & $\SI{0.001}{}$\\
       \bottomrule
   \end{tabular}
 \end{table}
