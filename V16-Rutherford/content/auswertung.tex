@@ -135,49 +135,9 @@ Mit den Werten:
   &d = \frac{2 E_{\symup{ohne}} m_{\symup{0}}}{m_{\symup{\alpha}} I_{\symup{Au}}}
 \end{align*}
 
+\subsection{Bestimmung des Raumwinkels und der Aktivität}
 
-\subsection{Differentieller Wirkungsquerschnitt}
-\label{sec:wq}
-In Tabelle 2 werden die Anzahl der gemessenen Ereignisse $N$ in Abhängigkeit des Winkels $\Theta$ und der Messzeit $t$
-sowie die daraus resultierende Zählrate $I$ dargestellt.
-
-
-\begin{table}[H]
-  \centering
-  \caption{Zählrate in Abhängigkeit von Winkel und Messzeit.}
-  \label{tab:Parameter}
-  \begin{tabular}{c c c c}
-    \toprule
-    N & $\Theta/$° & $t$ /s & $I / \frac{1}{s}$\\
-    \midrule
-    $\SI{2219(47)}{}$ &  0 & 200 & $\SI{12.00(24)}{}$ \\
-    $\SI{2120(46)}{}$ &  1 & 200 & $\SI{10.60(23)}{}$ \\
-    $\SI{1748(42)}{}$ &  2 & 200 & $\SI{8.74(21)}{}$ \\
-    $\SI{1477(38)}{}$ &  3 & 200 & $\SI{7.39(19)}{}$ \\
-    $\SI{1684(41)}{}$ &  4 & 300 & $\SI{5.61(14)}{}$ \\
-    $\SI{1317(36)}{}$ &  5 & 300 & $\SI{4.39(12)}{}$ \\
-    $\SI{1218(35)}{}$ &  6 & 400 & $\SI{3.05(9)}{}$ \\
-    $\SI{1199(35)}{}$ &  7 & 600 & $\SI{2.00(6)}{}$ \\
-    $\SI{764(28)}{}$  &  8 & 600 & $\SI{1.27(5)}{}$ \\
-    $\SI{519(23)}{}$  & 10 & 600 & $\SI{0.87(4)}{}$ \\
-    $\SI{231(15)}{}$  & 12 & 600 & $\SI{0.39(3)}{}$ \\
-    $\SI{83(9)}{}$    & 15 & 600 & $\SI{0.14(2)}{}$ \\
-    $\SI{34(6)}{}$    & 18 & 600 & $\SI{0.06(1)}{}$ \\
-    $\SI{25(5)}{}$    & 20 & 600 & $\SI{0.04(1)}{}$ \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-Der differentielle Wirkungsquerschnitt wird nun aus der Gleichung
-\begin{equation}
-  \frac{\symup{d}\sigma}{\symup{d}\Omega} = \frac{N}{t \cdot I_0 \cdot N_\symup{Au} \cdot \Delta x \cdot \Delta \Omega}
-  \label{eqn:wq}
-\end{equation}
-berechnet.
-
-Dabei ist $I_0$ die Zählrate der Nullmessung ohne Folie und ergibt sich zu $I_0 =\SI{20.83(26)}{1\per\second}$.
-
-$\Delta \Omega$ bezeichnet den pyramidenartigen Raumwinkel, der von
+$\Delta \Omega$ bezeichnet den pyramidenartigen Raumwinkel um die Folie, der von
 der effektiven Detektorfläche eingenommen wird. Um diesen zu berechnen, muss
 als Erstes die effektive Detektorfläche selbst bestimmt werden. Dies geschieht
 mithilfe der in Abbildung \ref{fig:skizze} gezeigten geometrischen Überlegungen.
@@ -222,6 +182,94 @@ Der Raumwinkel ergibt sich dann aus \cite{sample2}
   \Delta \Omega = 4 \cdot \arctan\left(\frac{b \cdot h}{2d \cdot \sqrt{4d^2 + b^2 + h^2}}\right) = \SI{0.0118}{sr}
 \end{equation}
 
+$\Delta \Omega_{\symup{Quelle}}$ sei nun der Raumwinkel um die Quelle, in welchem der Detektor misst.
+Dieser kann ganz analog zu den Überlegungen in Abbildung \ref{fig:skizze} bestimmt werden, jedoch betragen die
+Abstände $c$ und $d$ hier:
+\begin{align*}
+  c &= \SI{97}{\milli\meter} \\
+  d &= \SI{101}{\milli\meter}
+\end{align*}
+Grund dafür ist, dass es sich hierbei nun um die Abstände von der Quelle zur Blende
+sowie von der Quelle zum Detektor handeln muss. $\Delta \Omega_{\symup{Quelle}}$ ist nämlich
+der Raumwinkel um die Quelle, und nicht - wie $\Delta \Omega$ - der Raumwinkel um die Folie.
+Es ergibt sich:
+\begin{equation*}
+  \Delta \Omega_{\symup{Quelle}} = \SI{0.0021}{sr}
+\end{equation*}
+
+Die theoretisch zu erwartende heutige Aktivität $A_{\symup{h,theo}}$ lässt sich aus dem gegebenen Wert von
+$A = \SI{330}{\kilo\becquerel}$ \cite{sample1} im Oktober 1994 berechnen.
+
+Die vergangene Zeit seit Oktober 1994 beträgt $t= (24 + \frac{8}{12})\,\symup{a}$.
+Die Halbwertszeit von 241-Am beträgt $T_{1/2} = \SI{432}{a}$ \cite{sample8}, woraus sich eine
+Zerfallskonstante von
+
+$\lambda = \frac{ln(2)}{T_{1/2}} = 1,605 \cdot 10^{-3} \, \frac{1}{a}$ ergibt.
+Für die heutige Aktivität ergibt sich nach dem Zefallsgesetzt somit
+\begin{equation*}
+  A_{\symup{h,theo}} = A \cdot exp(-\lambda t) = \SI{317190.54}{\becquerel}
+\end{equation*}
+
+Des weiteren lässt sich die heutige Aktivität $A_{\symup{h,exp}}$ aus der experimentell bestimmten
+Zählrate der Nullmessung $I_0 = \SI{20.83(26)}{1\per\second}$ und dem entsprechenden Raumwinkel $\Delta \Omega_{\symup{Quelle}}$ berechnen.
+
+Die Zählrate der Nullmessung $I_0$ und die heutige Aktivität $A_\symup{h,exp}$ müssen im gleichen
+Verhältnis stehen wie der Raumwinkel $\Delta \Omega_{\symup{Quelle}}$ und der gesamte Raumwinkel:
+\begin{equation*}
+  \frac{A_\symup{h,exp}}{I_0} = \frac{4\pi}{\Delta \Omega_{\symup{Quelle}}}
+\end{equation*}
+Daraus ergbit sich
+\begin{equation*}
+  A_\symup{h,exp} = I_0 \cdot \frac{4\pi}{\Delta \Omega_{\symup{Quelle}}} = \SI{123.3(16)e3}{\kilo\becquerel}
+\end{equation*}
+Der Fehler wird dabei wieder aus der Gauß'schen Fehlerfortpflanzung bestimmt:
+\begin{equation*}
+  \sigma_{A_\symup{h,exp}} = \frac{4\pi}{\Delta \Omega_{\symup{Quelle}}} \cdot \sigma_{I_0}
+\end{equation*}
+
+
+
+\subsection{Differentieller Wirkungsquerschnitt}
+\label{sec:wq}
+In Tabelle 2 werden die Anzahl der gemessenen Ereignisse $N$ in Abhängigkeit des Winkels $\Theta$ und der Messzeit $t$
+sowie die daraus resultierende Zählrate $I$ dargestellt.
+
+
+\begin{table}[H]
+  \centering
+  \caption{Zählrate in Abhängigkeit von Winkel und Messzeit.}
+  \label{tab:Parameter}
+  \begin{tabular}{c c c c}
+    \toprule
+    N & $\Theta/$° & $t$ /s & $I / \frac{1}{s}$\\
+    \midrule
+    $\SI{2219(47)}{}$ &  0 & 200 & $\SI{12.00(24)}{}$ \\
+    $\SI{2120(46)}{}$ &  1 & 200 & $\SI{10.60(23)}{}$ \\
+    $\SI{1748(42)}{}$ &  2 & 200 & $\SI{8.74(21)}{}$ \\
+    $\SI{1477(38)}{}$ &  3 & 200 & $\SI{7.39(19)}{}$ \\
+    $\SI{1684(41)}{}$ &  4 & 300 & $\SI{5.61(14)}{}$ \\
+    $\SI{1317(36)}{}$ &  5 & 300 & $\SI{4.39(12)}{}$ \\
+    $\SI{1218(35)}{}$ &  6 & 400 & $\SI{3.05(9)}{}$ \\
+    $\SI{1199(35)}{}$ &  7 & 600 & $\SI{2.00(6)}{}$ \\
+    $\SI{764(28)}{}$  &  8 & 600 & $\SI{1.27(5)}{}$ \\
+    $\SI{519(23)}{}$  & 10 & 600 & $\SI{0.87(4)}{}$ \\
+    $\SI{231(15)}{}$  & 12 & 600 & $\SI{0.39(3)}{}$ \\
+    $\SI{83(9)}{}$    & 15 & 600 & $\SI{0.14(2)}{}$ \\
+    $\SI{34(6)}{}$    & 18 & 600 & $\SI{0.06(1)}{}$ \\
+    $\SI{25(5)}{}$    & 20 & 600 & $\SI{0.04(1)}{}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Der differentielle Wirkungsquerschnitt wird nun aus der Gleichung
+\begin{equation}
+  \frac{\symup{d}\sigma}{\symup{d}\Omega} = \frac{N}{t \cdot I_0 \cdot N_\symup{Au} \cdot \Delta x \cdot \Delta \Omega}
+  \label{eqn:wq}
+\end{equation}
+berechnet \cite{sample10} \cite{sample9}.
+
+Dabei ist $I_0$ die Zählrate der Nullmessung ohne Folie und ergibt sich zu $I_0 =\SI{20.83(26)}{1\per\second}$.
+
 $N_\symup{Au}$ ist die Teilchendichte von Gold. Sie berechnet sich mit der Dichte
 $\rho_\symup{Au} = \SI{19.32}{\gram\per\centi\meter^3}$ \cite{sample} und molaren Masse $M_\symup{Au} = \SI{196.97}{\gram\per\mol}$ \cite{sample}
 von Gold aus
@@ -231,7 +279,8 @@ von Gold aus
 \end{equation}
 
 
-$\Delta x = 2 \cdot 10^{-6} \, \symup{m}$ ist die Dicke der Folie. Daraus können dann die
+$\Delta x = 2 \cdot 10^{-6} \, \symup{m}$ ist die Dicke der Folie und $\Delta \Omega$
+der oben bereits berechnete Raumwinkel um die Folie. Daraus können dann die
 differentiellen Wirkungsquerschnitte berechnet werden. Die Ergebnisse sind in Tabelle 3
 in Abhängigkeit vom Winkel $\Theta$ dargestellt. Außerdem werden auch die nach
 Gleichung \ref{eqn:rutherford} berechneten theoretischen Werte für die entsprechenden
@@ -281,52 +330,6 @@ Die berechneten Werte und die Theoriekurve, welche sich aus Gleichung \ref{eqn:r
   \label{fig:wirkungsquerschnitt}
 \end{figure}
 
-
-\subsection{Bestimmung des Raumwinkels und der Aktivität}
-
-Die theoretisch zu erwartende heutige Aktivität $A_{\symup{h,theo}}$ lässt sich aus dem gegebenen Wert von
-$A = \SI{330}{\kilo\becquerel}$ \cite{sample1} im Oktober 1994 berechnen.
-
-Die vergangene Zeit seit Oktober 1994 beträgt $t= (24 + \frac{8}{12})\,\symup{a}$.
-Die Halbwertszeit von 241-Am beträgt $T_{1/2} = \SI{432}{a}$ \cite{sample8}, woraus sich eine
-Zerfallskonstante von
-
-$\lambda = \frac{ln(2)}{T_{1/2}} = 1,605 \cdot 10^{-3} \, \frac{1}{a}$ ergibt.
-Für die heutige Aktivität ergibt sich nach dem Zefallsgesetzt somit
-\begin{equation*}
-  A_{\symup{h,theo}} = A \cdot exp(-\lambda t) = \SI{317190.54}{\becquerel}
-\end{equation*}
-
-Des weiteren lässt sich die heutige Aktivität $A_{\symup{h,exp}}$ aus der experimentell bestimmten
-Zählrate der Nullmessung $I_0 = \SI{20.83(26)}{1\per\second}$ und dem entsprechenden Raumwinkel $\Delta \Omega_{\symup{Quelle}}$ berechnen.
-$\Delta \Omega_{\symup{Quelle}}$ ist dabei der Raumwinkel um die Quelle, in welchem der Detektor bei der Nullmessung gemessen hat.
-Dieser kann ganz analog zu den Überlegungen in Abbildung \ref{fig:skizze} bestimmt werden, jedoch betragen die
-Abstände $c$ und $d$ hier:
-\begin{align*}
-  c &= \SI{97}{\milli\meter} \\
-  d &= \SI{101}{\milli\meter}
-\end{align*}
-Grund dafür ist, dass es sich hierbei nun um die Abstände von der Quelle zur Blende
-sowie von der Quelle zum Detektor handeln muss. $\Delta \Omega_{\symup{Quelle}}$ ist nämlich
-der Raumwinkel um die Quelle, und nicht - wie $\Delta \Omega$ - der Raumwinkel um die Folie.
-Es ergibt sich:
-\begin{equation*}
-  \Delta \Omega_{\symup{Quelle}} = \SI{0.0021}{sr}
-\end{equation*}
-
-Die Zählrate der Nullmessung $I_0$ und die heutige Aktivität $A_\symup{h,exp}$ müssen im gleichen
-Verhältnis stehen wie der Raumwinkel $\Delta \Omega_{\symup{Quelle}}$ und der gesamte Raumwinkel:
-\begin{equation*}
-  \frac{A_\symup{h,exp}}{I_0} = \frac{4\pi}{\Delta \Omega_{\symup{Quelle}}}
-\end{equation*}
-Daraus ergbit sich
-\begin{equation*}
-  A_\symup{h,exp} = I_0 \cdot \frac{4\pi}{\Delta \Omega_{\symup{Quelle}}} = \SI{123.3(16)e3}{\kilo\becquerel}
-\end{equation*}
-Der Fehler wird dabei wieder aus der Gauß'schen Fehlerfortpflanzung bestimmt:
-\begin{equation*}
-  \sigma_{A_\symup{h,exp}} = \frac{4\pi}{\Delta \Omega_{\symup{Quelle}}} \cdot \sigma_{I_0}
-\end{equation*}
 
 
 \subsection{Untersuchung der Mehrfachstreuung}
