@@ -150,3 +150,24 @@ plt.grid()
 plt.ylabel(r'$\frac{I}{N\cdot \Delta x} / \frac{\mathrm{m^2}}{\mathrm{s}}$')
 plt.xlabel('Z')
 plt.savefig('build/z.pdf')
+
+#Raumwinkel Quelle
+a = 2
+c = 97
+d = 101
+b = a*d/c
+#print(b)
+
+#Höhe
+l = 10
+h = l*d/c
+#print(h)
+
+#Pyramidenartiger Raumwinkel:
+omega = 4 * np.arctan((b*h)/(2*d*np.sqrt(4*d**2 + b**2 + h**2)))
+#print(omega)
+
+#heutige Aktivität
+I0 = ufloat(6249/300, np.sqrt(6249)/300)
+A = I0 * (4*np.pi)/omega
+print(A)
