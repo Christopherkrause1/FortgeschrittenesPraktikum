@@ -1,6 +1,6 @@
 \section{Theorie}
 \label{sec:Theorie}
-%\cite{sample}
+
 Durchdringen $\alpha$-Teilchen durch Materie, kommt es zu zwei unterschiedlichen Wechselwirkungen.
 Zum einen können die $\alpha$-Teilchen Energie an die Hüllenelektronen abgeben und zum anderen
 an Atomkernen streuen. Der Energieverlust pro Weglänge $x$ der $\alpha$-Teilchen durch die Hüllenelektronen wird dabei für
@@ -10,7 +10,9 @@ Bethe-Bloch-Gleichung beschrieben.
   -\frac{\mathrm{d}E}{\mathrm{d}x} =-\frac{\Delta E}{\Delta x}= - \frac{4\pi e^2 z^2 N Z}{m_{\mathrm{0}}v^2(4 \pi \epsilon_{\mathrm{0}})^2} \ln{\frac{2 m_{\mathrm{0}} v^2}{I}}
 \end{align}
 Mit der Elektronendichte $N$, der Kernladungszahl $Z$, der Geschwindigkeit $v$, der mittleren Ionisationsenergie $I$ des Materials
-und der Ruhenergie $m_{\mathrm{0}}$ der Elektronen.
+und der Ruhenergie $m_{\mathrm{0}}$ der Elektronen. Diese Formel ist nur unter den Annahmen eines einfallenden
+schweren Teilchens und in ruhe befindenden Elektronen gültig. Zusätzlich wird angenommen, dass das einfallende Teilchen nicht
+abgelenkt wird.
 
 Die Streuung der Teilchen an einem Atomkern wird durch die Rutherfordsche Streuformel beschrieben. Hierbei gilt:
 \begin{align}
@@ -20,3 +22,18 @@ Die Streuung der Teilchen an einem Atomkern wird durch die Rutherfordsche Streuf
 Hierbei ist $\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega}(\Theta)$ der differentielle Wirkungsquerschnitt in Abhängigkeit von dem Winkel $\Theta$
 zwischen einfallendem und gestreuten $\alpha$-Teilchen und
 $E_{\mathrm{\alpha}}$ die mittlere kinetische Energie der $\alpha$-Teilchen.
+Hierbei wird angenommen, dass das Targetteilchen keine Ausdehnung hat und wesentlich schwerer
+als das einfallende, spinlose Teilchen ist. Der Stoß ist elastisch.
+
+Der Wirkungsquerschnitt beschreibt die Wahrscheinlichkeit eines einfallenden Teilchen an
+einem Target zu streuen. Kommt es bei der Streuung zur Richtungsänderung, so wird
+die Intensitätsverteilung des gestreuten Teilchens durch den differetiellen Wirkungsquerschnitt
+beschrieben.
+
+Americium ist ein $\alpha$- und ein $\beta$-Strahler. Der $\alpha$-Zerfall von ${}^{241}\mathrm{Am}$ sieht wie folgt aus:
+\begin{align*}
+  {}^{241}\mathrm{Am} \rightarrow {}^{237}\mathrm{Np}
+\end{align*}
+
+Die gemessene Zählrate ist poissonverteilt, wodurch der Fehler die Wurzel der Zählrate ist. Um den
+statistischen Fehler kleiner als $3\%$ zu halten muss die Zählrate mindestens 1112 betragen.
