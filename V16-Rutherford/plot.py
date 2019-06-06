@@ -171,3 +171,5 @@ omega = 4 * np.arctan((b*h)/(2*d*np.sqrt(4*d**2 + b**2 + h**2)))
 I0 = ufloat(6249/300, np.sqrt(6249)/300)
 A = I0 * (4*np.pi)/omega
 print(A)
+B = 317190.54
+print(1 - A/B)
