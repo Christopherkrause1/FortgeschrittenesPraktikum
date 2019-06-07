@@ -36,11 +36,12 @@ Für den Rotationswinkel $\Theta$ um der sich die Polarisationsebene dreht gilt:
   \Theta \approx \frac{L \omega}{2 c^2}v_{\mathrm{Ph}} \chi_{\mathrm{xy}} = \frac{L \omega}{2 c}\chi_{\mathrm{xy}}
 \end{align}
 
-Für Messfrequenzen von $\omega = 10°{14}-10^{15}$\, Hz gilt:
+Für Messfrequenzen von $\omega = 10^{14}-10^{15}$\, Hz gilt:
 \begin{align}
-  \Theta \approx \frac{e^3_0}{2 \epsilon_0 c} \frac{1}{m^2}\frac{\omega^2}{\omega^2_0 - \omega^2}^2 \frac{NBL}{n}
+  \Theta \approx \frac{e^3_0}{2 \epsilon_0 c} \frac{1}{m^2}\frac{\omega^2}{\omega^2_0 - \omega^2}^2 \frac{NBL}{n} \label{eqn:theta}
 \end{align}
-
+Mit der Flussdichte $B$, der Probenlänge $L$, der Elektronen pro Volumen $N$, der Resonanzfrequenz $\omega_0$,
+der Phasengeschwindigkeit $v_{\mathrm{ph}}$ und dem Brechungsindex $n$.
 
 Über die effektive Masse können Information der Bandstruktur erhalten werden.
 Um die effektive Masse zu bestimmen wird die Elektronenergie $\epsilon (k)$,
@@ -61,3 +62,9 @@ so folgt für die effektive Masse $m^*$:
 
 Mit der effektiven Masse können Elektronen in einem Band mit kugelförmigen
 Energieflächen im k-Raum wie freie Teilchen behandeln.
+Wird in Gleichung \ref{eqn:theta} die Masse der gebundenen Elektronen durch die effektive Masse ersetzt, gilt:
+\begin{align}
+  \Theta_{\mathrm{frei}} = \frac{e^3_0}{8 \pi^2 \epsilon_0 c^3}\frac{1}{\left(m^{*}\right)^2} \lambda^2 \frac{NBL}{n} \label{eqn:frei}
+\end{align}
+Hierbei ist $\lambda$ die Wellenlänge des Lichts.
+Gleichung \ref{eqn:frei} gilt auch für quasifreie Elektronen, da für diese $\omega_0 \rightarrow 0$ gilt.
