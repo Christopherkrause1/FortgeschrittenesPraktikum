@@ -8,14 +8,15 @@ import uncertainties.unumpy as unp
 
 
 N = np.genfromtxt('verlauf.txt', unpack=True)
-x = np.linspace(0.5,146.5,147)
+x = np.linspace(1,147,147)
 
-plt.plot(x,N,'k-', label='Messwerte', linewidth=1)
+x_E = x/127*662
+plt.plot(x_E,N,'k-', label='Messwerte', linewidth=1)
 plt.grid()
 plt.legend()
-plt.xlabel('Channel')
+plt.xlabel('Energie / keV')
 plt.ylabel('Counts')
-plt.xlim(0,147)
+plt.xlim(2,760)
 # in matplotlibrc leider (noch) nicht möglich
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/verlauf.pdf')
