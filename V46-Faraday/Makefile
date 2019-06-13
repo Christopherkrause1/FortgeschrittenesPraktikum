@@ -17,9 +17,13 @@ build/dotiert136.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
 build/dotiert1296.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
+build/differenz136.pdf: plot.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
+build/differenz1296.pdf: plot.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/rein.pdf build/dotiert136.pdf build/dotiert1296.pdf
+build/main.pdf: build/rein.pdf build/dotiert136.pdf build/dotiert1296.pdf build/differenz136.pdf build/differenz1296.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS="$(call translate,build:)" \
