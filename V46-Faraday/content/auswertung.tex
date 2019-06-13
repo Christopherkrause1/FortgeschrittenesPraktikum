@@ -39,7 +39,7 @@ in Abbildung \ref{fig:rein} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics{rein.pdf}
-  \caption{Der auf die Länge normierte Drehwinkel in Abhängigkeit der Wellenlänge für die reine Probe.}
+  \caption{Auf die Länge normierter Drehwinkel in Abhängigkeit der Wellenlänge für die reine Probe.}
   \label{fig:rein}
 \end{figure}
 
@@ -76,7 +76,7 @@ in Abbildung \ref{fig:rein} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics{dotiert136.pdf}
-  \caption{Der auf die Länge normierte Drehwinkel in Abhängigkeit der Wellenlänge für die dotierte Probe ($N = \SI{1.2e18}{1\per\centi\meter^3}$).}
+  \caption{Auf die Länge normierter Drehwinkel in Abhängigkeit der Wellenlänge für die dotierte Probe ($N = \SI{1.2e18}{1\per\centi\meter^3}$).}
   \label{fig:rein}
 \end{figure}
 
@@ -112,14 +112,14 @@ in Abbildung \ref{fig:rein} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics{dotiert1296.pdf}
-  \caption{Der auf die Länge normierte Drehwinkel in Abhängigkeit der Wellenlänge für die dotierte Probe ($N = \SI{2.8e18}{1\per\centi\meter^3}$).}
+  \caption{Auf die Länge normierter Drehwinkel in Abhängigkeit der Wellenlänge für die dotierte Probe ($N = \SI{2.8e18}{1\per\centi\meter^3}$).}
   \label{fig:rein}
 \end{figure}
 
 
 \subsection{Bestimmung der effektiven Masse}
-Für den Brechungsindex wird ein Mittelwert aus den verschiedenen Brechungsindices berechnet,
-welche in dem Wellenlängenbreich des hier zu betrachtenden Lichtes liegt. In Abbildung \ref{tab:Brechung}
+Für den Brechungsindex wird ein Mittelwert aus den verschiedenen Brechungsindices,
+welche in dem Wellenlängenbreich des hier zu betrachtenden Lichtes liegen, berechnet. In Abbildung \ref{tab:Brechung}
 sind die einzelnen Brechungsindices dargestellt.
 
 \begin{table}[H]
@@ -160,9 +160,36 @@ Anpassungsfunktion $y=a \cdot x$ für die Werte von $\Theta_{\mathrm{frei}}$ dar
   \label{fig:differenz136}
 \end{figure}
 
+Für den Parameter $a$ ergibt sich für die erste Probe:
+\begin{align*}
+  a = \SI{6.4(11)}{\radian\per\meter^3}
+\end{align*}
+Daraus wird mit Gleichung \ref{eqn:frei} die effektive Masse bestimmt.
+\begin{align*}
+  m^*_1 = \sqrt{\frac{NB e^3_0}{8 \pi^2 \epsilon_0 n c^3 a}} = \SI{7.1(6)e-32}{\kilo\gram}
+\end{align*}
+
+
 \begin{figure}[H]
   \centering
   \includegraphics{differenz1296.pdf}
   \caption{Differenz der auf die Länge normierten Drehwinkel der dotierten Probe ($N = \SI{2.8e18}{1\per\centi\meter^3}$) und der reinen Probe in Abhängigkeit der Wellenlänge.}
   \label{fig:differenz1296}
 \end{figure}
+
+
+Für den Parameter $a$ ergibt sich für die zweite Probe:
+\begin{align*}
+  a = \SI{11.7(16)}{\radian\per\meter^3}
+\end{align*}
+Daraus wird die effektive Masse bestimmt.
+\begin{align*}
+  m^*_2 = \sqrt{\frac{NB e^3_0}{8 \pi^2 \epsilon_0 n c^3 a}} = \SI{8.0(6)e-32}{\kilo\gram}
+\end{align*}
+
+
+Der Fehler der effektiven Masse wird dabei mit der Gaußschen Fehlerfortpflanzung berechnet.
+\begin{align*}
+  \sigma_{m^*} &= \sqrt{\frac{\gamma^{2} \sigma_{n}^{2}}{4 a n^{3}}  + \frac{\gamma^{2} \sigma_{a}^{2}}{4 a^{3} n}} \\
+  \text{mit}\:\: \gamma &= \sqrt{\frac{NB e^3_0}{8 \pi^2 \epsilon_0 c^3}}
+\end{align*}
