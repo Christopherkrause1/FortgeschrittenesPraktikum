@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.constants import mu_0
+import scipy.constants as sp
 from scipy.optimize import curve_fit
 from uncertainties import ufloat
 from uncertainties.umath import *
@@ -133,8 +133,16 @@ plt.savefig('build/differenz136.pdf')
 plt.clf()
 
 a_136 = ufloat(6.38309048, 1.09034248) * 10**(12)
-
-#Abziehen der Dotierung Probe der Dicke 1,36mm
+n = np.array([3.338, 3.354, 3.374, 3.397, 3.423, 3.455, 3.492])
+print('Mittelwert:',np.mean(n))
+print('Fehler:', np.std(n))
+n = ufloat(np.mean(n),np.std(n))
+#Berechnung Masse
+N = 1.2 *10**(24)
+B = 421 *10**(-3)
+m = unp.sqrt((sp.e**3*N*B)/(8*np.pi**2*sp.epsilon_0*sp.c**3*a_136*n))
+print(m)
+#Abziehen der Dotierung Probe der Dicke 1,296mm
 theta = theta_frei_dotiert1296 - theta_frei_rein
 
 x_plot = np.linspace(1, 8)
@@ -157,3 +165,6 @@ plt.savefig('build/differenz1296.pdf')
 plt.clf()
 
 a_1296 = ufloat(11.74260897, 1.6360627) * 10**(12)
+N = 2.8 *10**(24)
+m = unp.sqrt((sp.e**3*N*B)/(8*np.pi**2*sp.epsilon_0*sp.c**3*a_1296*n))
+print(m)
