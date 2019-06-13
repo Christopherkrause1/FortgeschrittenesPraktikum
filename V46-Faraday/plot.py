@@ -16,7 +16,7 @@ thetar = gradr + minutenr/60
 thetal = thetal/360 * 2*np.pi
 thetar = thetar/360 * 2*np.pi
 #Berechnung des Drehwinkels
-theta = thetar - thetal
+theta = 1/2*(thetar - thetal)
 #Drehwinkel pro Länge
 theta_frei = theta/L
 #Ausgabe der Winkel
@@ -49,7 +49,7 @@ thetar = gradr + minutenr/60
 thetal = thetal/360 * 2*np.pi
 thetar = thetar/360 * 2*np.pi
 #Berechnung des Drehwinkels
-theta = thetar - thetal
+theta = 1/2*(thetar - thetal)
 #Drehwinkel pro Länge
 theta_frei = theta/L
 #Ausgabe der Winkel
@@ -82,7 +82,7 @@ thetar = gradr + minutenr/60
 thetal = thetal/360 * 2*np.pi
 thetar = thetar/360 * 2*np.pi
 #Berechnung des Drehwinkels
-theta = thetar - thetal
+theta = 1/2*(thetar - thetal)
 #Drehwinkel pro Länge
 theta_frei = theta/L
 #Ausgabe der Winkel
