@@ -9,6 +9,9 @@ import uncertainties.unumpy as unp
 #Einlesen Daten reine Probe
 gradl, minutenl, gradr, minutenr, lamb = np.genfromtxt('rein.txt', unpack=True)
 L = 0.0051
+print('Wellenlaengen:')
+print(lamb)
+print('--------------------------------')
 #Berechnung der Winkel reine Probe
 thetal = gradl + minutenl/60
 thetar = gradr + minutenr/60
