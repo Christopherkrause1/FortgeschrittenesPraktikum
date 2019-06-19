@@ -89,7 +89,7 @@ Das Verhältnis der Achsenabschnitte $b_{\symup{mit}}$ und $b_{\symup{ohne}}$ en
 $E_{\symup{mit}}$ und $E_{\symup{ohne}}$ die Energien bei $p=\SI{0}{\milli\bar}$ darstellen.
 Für $\Delta x$ aus Gleichung (1) gilt damit:
 \begin{align}
-  &\Delta x = E_{\symup{ohne}} \left(1- \frac{b_{\symup{mit}}}{b_{\symup{ohne}}}\right) \frac{2 m_{\symup{0}} E_{\symup{\alpha}} (4 \pi \epsilon_0)^2}{4 \pi e^2 z_{\symup{\alpha}}  m_{\symup{\alpha}} N_{\symup{Au}} Z_{\symup{Au}} \ln{\left(\frac{4 E_{\symup{\alpha}} m_{\symup{0}}}{m_{\symup{\alpha}} I_{\symup{Au}}}\right)}} \\
+  &\Delta x = E_{\symup{ohne}} \left(1- \frac{b_{\symup{mit}}}{b_{\symup{ohne}}}\right) \frac{2 m_{\symup{0}} E_{\symup{\alpha}} (4 \pi \epsilon_0)^2}{4 \pi e^4 z_{\symup{\alpha}}  m_{\symup{\alpha}} N_{\symup{Au}} Z_{\symup{Au}} \ln{\left(\frac{4 E_{\symup{\alpha}} m_{\symup{0}}}{m_{\symup{\alpha}} I_{\symup{Au}}}\right)}} \\
   \text{mit} \:\: &\Delta E = E_{\mathrm{mit}} - E_{\mathrm{ohne}} = E_{\mathrm{ohne}} \cdot \left(1- \frac{b_{\symup{mit}}}{b_{\symup{ohne}}}\right) \\
   &E_{\symup{\alpha}} = \bar{E} = \frac{1}{2} \cdot E_{\mathrm{ohne}} \left(1+ \frac{b_{\symup{mit}}}{b_{\symup{ohne}}}\right)
 \end{align}
@@ -101,7 +101,7 @@ Hierbei gilt für die Werte:
   &I_{\symup{Au}} = \SI{790}{\eV} \text{\cite{sample6}}\\
   &E_{\symup{ohne}} = \SI{5.486}{\mega\eV}   \text{\cite{sample3}} \\
   &Z_{\symup{Au}} = 79 \text{\cite{sample5}}\\
-  &N_{\symup{Au}} = \frac{Z \cdot \rho_{\symup{Au}}}{A \cdot u} \approx \SI{5.895e22}{\per\centi\meter\squared} \text{\cite{sample5}}\\
+  &N_{\symup{Au}} = \frac{Z \cdot \rho_{\symup{Au}}}{A \cdot u} \approx \SI{5.895e22}{\per\centi\meter\tothe3} \text{\cite{sample5}}\\
   &z_{\symup{\alpha}} = 2 \\
 \end{align*}
 
@@ -134,6 +134,17 @@ Für das Bremsvermögen von $\alpha$-Teilchen mit einer Energie von $\SI{5.49}{\
   \text{mit}\:\: &I_{\mathrm{Luft}} = \SI{80.5}{\eV} \text{\cite{sample11}}\\
   &N\cdot Z_{\mathrm{N}} = \SI{3.5e26}{\per\meter\tothe{3}} \text{\cite{sample12}}
 \end{align*}
+Die $\alpha$-Teilchen kommen somit ungefähr $\SI{5}{\centi\meter}$ weit.
+Für die Bestimmung des Kammerdruckes, ab dem die $\alpha$-Teilchen den Detektor nicht mehr erreichen, wird die
+ideale Gasgleichung $pV = N k_{\mathrm{B}} T$ verwendet. Hierbei ist $V= \SI{101e-3}{\meter}$ der Abstand von Quelle und Detektor, $N=\SI{6.022e23}{}$ die Teilchenzahl,
+$k_{\mathrm{b}}$ die Boltzmann-Konstante und $T$ die Temperatur, hier die
+Raumtemperatur.
+Für den Kammerdruck gilt:
+\begin{align*}
+  p = \SI{241.3}{\milli\bar}
+\end{align*}
+
+
 \subsection{Bestimmung des Raumwinkels und der Aktivität}
 
 $\Delta \Omega$ bezeichnet den pyramidenartigen Raumwinkel um die Folie, der von
